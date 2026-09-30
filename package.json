@@ -1,0 +1,12 @@
+{
+  "name": "boradendesign7",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node src/build.mjs",
+    "start": "node server.mjs",
+    "check": "node --check public/app.js && node --check public/calculators.js && node --test check.mjs"
+  }
+}
