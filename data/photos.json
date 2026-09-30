@@ -1,0 +1,58 @@
+[
+  {
+    "asset": "handshake",
+    "original": "DSC_0243.JPG",
+    "scene": "handshake",
+    "width": 5520,
+    "height": 3680,
+    "source": "User-supplied boradenphoto; corporate scene, no individual portrait"
+  },
+  {
+    "asset": "meeting",
+    "original": "DSC_0041.JPG",
+    "scene": "meeting",
+    "width": 5520,
+    "height": 3680,
+    "source": "User-supplied boradenphoto; corporate scene, no individual portrait"
+  },
+  {
+    "asset": "signing",
+    "original": "DSC_0001.JPG",
+    "scene": "signing",
+    "width": 5520,
+    "height": 3680,
+    "source": "User-supplied boradenphoto; corporate scene, no individual portrait"
+  },
+  {
+    "asset": "partnership",
+    "original": "DSC_0237.JPG",
+    "scene": "partnership",
+    "width": 5520,
+    "height": 3680,
+    "source": "User-supplied boradenphoto; corporate scene, no individual portrait"
+  },
+  {
+    "asset": "table",
+    "original": "DSC_0088.JPG",
+    "scene": "table",
+    "width": 5520,
+    "height": 3680,
+    "source": "User-supplied boradenphoto; corporate scene, no individual portrait"
+  },
+  {
+    "asset": "office",
+    "original": "DSC_7640.JPG",
+    "scene": "office",
+    "width": 6000,
+    "height": 4000,
+    "source": "User-supplied boradenphoto; corporate scene, no individual portrait"
+  },
+  {
+    "asset": "working",
+    "original": "DSC_0201.JPG",
+    "scene": "working",
+    "width": 5520,
+    "height": 3680,
+    "source": "User-supplied boradenphoto; corporate scene, no individual portrait"
+  }
+]
