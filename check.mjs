@@ -7,7 +7,7 @@ import http from 'node:http';
 import {server} from './server.mjs';
 import {build,root} from './src/build.mjs';
 import {content,archive,publications,dateTR} from './src/content.mjs';
-import {normalizeSearch,matchesSearch,archivePageState} from './public/ui-core.js';
+import {normalizeSearch,matchesSearch,archivePageState,heroMotionAllowed} from './public/ui-core.js';
 import {vehicleSchedule} from './public/vehicle-core.js';
 
 test('complete standalone pages, links, metadata and factual schema',()=>{
@@ -95,7 +95,7 @@ test('production indexing is explicit and validates deployment origin',()=>{
   build();
 });
 
-test('Turkish search and filtered archive pagination',()=>{
+test('Turkish search, archive pagination and safe photo motion',()=>{
   assert.equal(normalizeSearch('ŞİRKET DEĞERLEMESİ'),'sirket degerlemesi');
   assert.ok(matchesSearch('İnsan Kaynakları ve Bordro','insan bordro'));
   assert.ok(!matchesSearch('Vergi','bordro'));
@@ -109,6 +109,12 @@ test('Turkish search and filtered archive pagination',()=>{
   assert.equal(filtered.count,50);assert.equal(filtered.current,5);assert.deepEqual(filtered.indices,[97,99]);
   assert.equal(archivePageState(records,'','',-3).current,1);
   assert.deepEqual(archivePageState(records,'olmayan','2022').indices,[]);
+  assert.equal(heroMotionAllowed(false,false,1,false),true);
+  assert.equal(heroMotionAllowed(true,false,1,false),false);
+  assert.equal(heroMotionAllowed(false,true,1,false),false);
+  assert.equal(heroMotionAllowed(false,false,.19,false),false);
+  assert.equal(heroMotionAllowed(false,false,.2,false),true);
+  assert.equal(heroMotionAllowed(false,false,1,true),false);
 });
 
 test('calculator results, ceilings, rounding and rejected inputs',()=>{
