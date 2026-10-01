@@ -1,4 +1,4 @@
-import {matchesSearch} from './ui-core.js';
+import {matchesSearch,archivePageState} from './ui-core.js';
 
 const root=document.documentElement;
 root.classList.add('js');
@@ -70,11 +70,22 @@ const archiveSearch=document.querySelector('[data-archive-search]');
 if(archiveSearch) {
   const year=document.querySelector('[data-archive-year]');
   const rows=[...document.querySelectorAll('[data-archive-text]')];
+  const records=rows.map(row=>({text:row.dataset.archiveText,year:row.dataset.year}));
+  const previous=document.querySelector('[data-archive-prev]');
+  const next=document.querySelector('[data-archive-next]');
+  let page=1;
   const update=()=>{
-    let count=0;
-    rows.forEach(row=>{row.hidden=!(matchesSearch(row.dataset.archiveText,archiveSearch.value) && (!year.value || row.dataset.year===year.value));if(!row.hidden)count++;});
-    document.querySelector('[data-archive-count]').textContent=`${count} belge`;
-    document.querySelector('[data-archive-empty]').hidden=count!==0;
+    const state=archivePageState(records,archiveSearch.value,year.value,page);
+    page=state.current;
+    rows.forEach((row,index)=>{row.hidden=!state.indices.includes(index);});
+    document.querySelector('[data-archive-count]').textContent=`${state.count} belge`;
+    document.querySelector('[data-archive-empty]').hidden=state.count!==0;
+    document.querySelector('[data-archive-page]').textContent=`${page} / ${state.pages}`;
+    previous.disabled=page===1;next.disabled=page===state.pages;
   };
-  archiveSearch.addEventListener('input',update);year.addEventListener('change',update);
+  const filter=()=>{page=1;update();};
+  archiveSearch.addEventListener('input',filter);year.addEventListener('change',filter);
+  previous.addEventListener('click',()=>{page--;update();});
+  next.addEventListener('click',()=>{page++;update();});
+  update();
 }
