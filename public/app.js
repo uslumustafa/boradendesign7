@@ -1,14 +1,14 @@
-import {matchesSearch,archivePageState,heroMotionAllowed} from './ui-core.js';
+import {matchesSearch,archivePageState,heroMotionAllowed,cardLightingPosition} from './ui-core.js';
 
 const root=document.documentElement;
 root.classList.add('js');
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 let manualPause=false;
-const parallax=[...document.querySelectorAll('[data-parallax]')];
 const siteHeader=document.querySelector('.site-header');
 const heroStage=document.querySelector('[data-hero-stage]');
 const heroScenes=[...document.querySelectorAll('[data-hero-scene]')];
 const heroSelect=[...document.querySelectorAll('[data-hero-select]')];
+const expertiseMenu=document.querySelector('.nav-expertise');
 let heroIndex=0,heroVisibility=1,heroTimer;
 let scheduled=false;
 
@@ -21,25 +21,24 @@ function showHeroScene(index,announce=false) {
 }
 function syncHeroMotion() {
   clearInterval(heroTimer);
-  const running=heroScenes.length>1 && heroMotionAllowed(root.classList.contains('motion-off'),document.hidden,heroVisibility,root.classList.contains('dialog-open'));
+  const running=heroScenes.length>1 && heroMotionAllowed(root.classList.contains('motion-off'),document.hidden,heroVisibility,root.classList.contains('dialog-open') || Boolean(expertiseMenu?.open));
   heroStage?.classList.toggle('scene-paused',!running);
   if(running) {
     heroTimer=setInterval(()=>showHeroScene(heroIndex+1),7000);
   }
 }
 heroSelect.forEach(button=>button.addEventListener('click',()=>{showHeroScene(Number(button.dataset.heroSelect),true);syncHeroMotion();}));
-document.querySelector('[data-hero-next]')?.addEventListener('click',()=>{showHeroScene(heroIndex+1,true);syncHeroMotion();});
 document.addEventListener('visibilitychange',syncHeroMotion);
+expertiseMenu?.addEventListener('toggle',()=>{root.classList.toggle('navigation-open',expertiseMenu.open);syncHeroMotion();});
+document.addEventListener('pointerdown',event=>{if(expertiseMenu?.open && !expertiseMenu.contains(event.target))expertiseMenu.open=false;});
+document.addEventListener('keydown',event=>{if(event.key==='Escape' && expertiseMenu?.open){expertiseMenu.open=false;expertiseMenu.querySelector('summary').focus();}});
 
 function renderScroll() {
   scheduled=false;
   const stopped=root.classList.contains('motion-off');
   siteHeader.classList.toggle('is-scrolled',scrollY>40);
-  if(heroStage) heroStage.style.setProperty('--hero-shift',stopped?'0px':Math.min(55,scrollY*.15)+'px');
-  parallax.forEach(el=>{
-    const rect=el.getBoundingClientRect();
-    if(!stopped && rect.bottom>0 && rect.top<innerHeight) el.style.setProperty('--parallax',Math.max(-30,Math.min(30,(innerHeight/2-rect.top-rect.height/2)*.06))+'px');
-  });
+  if(expertiseMenu?.open && innerWidth<=1080)expertiseMenu.open=false;
+  if(heroStage && !stopped)heroStage.style.setProperty('--hero-shift',Math.min(3,scrollY*.01)+'px');
 }
 function scheduleScroll() {if(!scheduled){scheduled=true;requestAnimationFrame(renderScroll);}}
 function setMotion() {
@@ -48,7 +47,7 @@ function setMotion() {
   document.querySelectorAll('[data-motion]').forEach(button=>{
     button.setAttribute('aria-pressed',String(stopped));
     button.disabled=reduced.matches;
-    button.innerHTML=reduced.matches ? 'Azaltılmış hareket etkin' : stopped ? 'Hareketi başlat <span aria-hidden="true">▷</span>' : 'Hareketi durdur <span aria-hidden="true">Ⅱ</span>';
+    button.textContent=reduced.matches ? 'Azaltılmış hareket etkin' : stopped ? 'Hareketi başlat' : 'Hareketi durdur';
   });
   scheduleScroll();
   syncHeroMotion();
@@ -56,6 +55,21 @@ function setMotion() {
 document.querySelectorAll('[data-motion]').forEach(b=>b.addEventListener('click',()=>{manualPause=!manualPause;setMotion();}));
 reduced.addEventListener('change',setMotion);
 setMotion();
+document.querySelectorAll('[data-spotlight]').forEach(card=>{
+  let pointerFrame;
+  card.addEventListener('pointermove',event=>{
+    if(pointerFrame || root.classList.contains('motion-off') || event.pointerType!=='mouse')return;
+    const x=event.clientX,y=event.clientY;
+    pointerFrame=requestAnimationFrame(()=>{
+      pointerFrame=undefined;
+      const rect=card.getBoundingClientRect();
+      const state=cardLightingPosition(x-rect.left,y-rect.top,rect.width,rect.height);
+      card.style.setProperty('--mx',state.x+'%');card.style.setProperty('--my',state.y+'%');
+      card.style.setProperty('--rx',state.rotateX+'deg');card.style.setProperty('--ry',state.rotateY+'deg');
+    });
+  });
+  card.addEventListener('pointerleave',()=>{cancelAnimationFrame(pointerFrame);pointerFrame=undefined;['--mx','--my','--rx','--ry'].forEach(name=>card.style.removeProperty(name));});
+});
 addEventListener('scroll',scheduleScroll,{passive:true});
 addEventListener('resize',scheduleScroll);
 addEventListener('pageshow',scheduleScroll);
