@@ -1,0 +1,11 @@
+NASA Black Marble / Earth at Night, 2016 composite map.
+Source: https://science.nasa.gov/earth/earth-observatory/earth-at-night/maps/
+Media guidelines: https://www.nasa.gov/nasa-brand-center/images-and-media/
+
+The local 4096 x 2048 texture was reused from the user's Design 6 project
+(boradendesign2/public/insan/earth/nasa-night-mobile.jpg).
+This is a historical composite image, not live Earth data.
+No NASA endorsement of Boraden is implied.
+
+Renderer: locally bundled Three.js r186, reused from Design 6.
+License: ../vendor/THREE-LICENSE.txt (MIT).
