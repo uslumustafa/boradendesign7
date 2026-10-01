@@ -1,5 +1,7 @@
 # Referans incelemesi ve uygulama — 1 Ekim 2026
 
+Son kullanıcı yönlendirmesiyle ana sayfa kısa bir geçiş sayfasına dönüştürüldü: açılış → altı kompakt hizmet kartı → dünya/ORBIST → kariyer. Ayrıntılar kendi sayfalarında kalır; dünya ve kariyer art arda gelir. Fotoğraf geçişi, kart ışığı, bölüm görünme hareketi ve ortak durdurma korunur. Aşağıdaki referans gözlemleri önceki tasarım kararlarının kaydıdır; son ana sayfa yapısı README.md içinde açıklanır.
+
 Kullanıcının YouTube bağlantısı, modern website etiket sayfası ve beş Dribbble çalışması tekrar incelendi. Statik sunumun gösterdiği düzen ile canlı etkileşimin kanıtladığı davranış ayrı değerlendirildi. Ek web araştırmasında Mercury, Ramp ve RSM’in canlı sayfaları incelendi. Amaç; fotoğraf, kart, menü ve iç sayfa hiyerarşisini Boraden’in gerçek içeriğine uyarlamaktı.
 
 ## Kullanıcının referansları

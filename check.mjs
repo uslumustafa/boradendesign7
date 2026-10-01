@@ -81,7 +81,14 @@ test('complete standalone pages, links, metadata and factual schema',()=>{
   assert.match(home,/id="dunyaya-bakis"/);
   assert.match(home,/<h3>ORBIST<\/h3>/);
   assert.match(home,/şube ağını veya kesin ofis adreslerini göstermez/);
-  assert.match(home,/id="dunyadan-perspektifler"/);
+  const main=home.match(/<main\b[^>]*>(.*?)<\/main>/s)[1];
+  const sections=[...main.matchAll(/<section class="([^"]+)"/g)].map(m=>m[1]);
+  assert.deepEqual(sections,['hero-premium wrap','home-services wrap','world wrap','home-career wrap']);
+  assert.equal((main.match(/class="home-service-card /g)||[]).length,6);
+  assert.match(main,/href="\/hizmetler\/"/);
+  assert.match(main,/href="\/bilgi-merkezi\/"/);
+  assert.match(main,/class="world-reading-link" href="\/perspektifler\/"/);
+  assert.match(main,/href="\/kariyer\/"/);
 });
 
 test('preview HTTP methods, redirects, missing files and rejected paths',async t=>{

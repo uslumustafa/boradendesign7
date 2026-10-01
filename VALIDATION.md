@@ -1,6 +1,17 @@
 # Doğrulama — 1 Ekim 2026
 
-## Renk ve gezinme düzeni: son sürüm
+## Kısa ana sayfa: son sürüm
+
+- Dört bölüm: açılış, altı hizmet kartı, dünya/ORBIST, kariyer. Kariyer dünya bölümünün hemen ardından gelir. Uzun yaklaşım, perspektif önizlemesi, yayın, soru ve görüşme blokları ana sayfadan kaldırıldı; ayrıntı sayfaları korunur.
+- Aynı gerçek tarayıcı genişliğinde ana içerik yüksekliği: 1280px masaüstünde 7019,8 → 2091,1px (%70,2 daha kısa); 387px mobilde 12156,8 → 2568,9px (%78,9 daha kısa). Footer dahil toplam yükseklik sırasıyla 7524 → 2596px ve 13079 → 3491px. Bu ölçümler kaydedilen görünüm ve fontlara aittir.
+- 320px, 387px ve 390px mobil görünümler ve 1280px masaüstü denetlendi; yatay taşma yok. Mobilde altı kart iki sütunda; 320px kart genişliği 135px. Küre iki etiketle WebGL üzerinden görünür; dünya/kariyer sırası gerçek DOM’da doğrulandı.
+- Hizmetler, Perspektifler ve Kariyer CTA’larına gerçek tarayıcıda tıklanarak hedef URL ve başlık doğrulandı. Ortak durdurma üç kontrolde etkin oldu. Sahne seçimi, bölüm görünme ve kart ışığı kuralları korunur; azaltılmış hareket kuralları kod incelemesinden geçti.
+- `npm run check`: 5 kontrol geçti, 0 hata. Yeni ana sayfa kontrolü dört bölüm sırasını, altı kartı ve doğrudan sayfa bağlantılarını doğrular. Mevcut 101 sayfa, 47 hizmet, 14 perspektif, 247 belge ve dört hesaplama aracının kontrolleri geçer.
+- Bağımsız Codex diff incelemesinde somut hata bulunmadı. Jev kısa akışı seçenekler arasından seçmede ve yeni kariyer metnindeki doğrulanmamış iddia olasılığını değerlendirmede kullanıldı; kaynak metni ayrıca Codex tarafından okundu. Yeni paket eklenmedi; kullanılmayan ana sayfa yardımcısı ve CSS kaldırıldı.
+
+Bu sürümün gerçek ekranları ve önce/sonra ölçümleri yerel `../output/design7-short-home-review/` klasöründedir. Önceki doğrulamalar aşağıda tarihsel kayıt olarak korunur.
+
+## Önceki renk ve gezinme düzeni
 
 - Tek ortak palet: lacivert `#14243A`, koyu metin `#111827`, mavi `#275BD1`, beyaz ve nötr açık gri. Lime/yeşil büyük yüzeyler ve farklı mavi/mor kart zeminleri kaldırıldı. Manrope, özgün logo, dünya, ORBIST, fotoğraflar ve bütün veriler korunur.
 - İki native açılır menü aynı `name` grubunu kullanır. Hizmetlerde altı alan, Bilgi Merkezi’nde altı içerik bölümü vardır. Mobilde yedi ana bağlantıya hesaplama, arşiv ve sektör bağlantıları eklenmiştir. Yayın kategori ve ayrıntılarında doğru üst bölüm etkin görünür; `aria-current` yalnız tam sayfa eşleşmesinde verilir.
