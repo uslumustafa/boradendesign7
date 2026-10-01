@@ -20,9 +20,9 @@ npm start
 - `src/site.mjs`: ortak sayfa düzeni, semantik HTML ve yapılandırılmış veri.
 - `src/build.mjs`: bağımsız statik site, sitemap ve robots üretimi.
 - `public/`: hareket, erişilebilir etkileşimler, hesaplamalar ve optimize edilmiş varlıklar.
-- `check.mjs`: içerik, bağlantı, meta veri, arama, sahne sınırları ve hesaplama kontrolleri.
+- `check.mjs`: içerik, bağlantı, meta veri, arama ve hesaplama kontrolleri.
 
-Hareketler doğal kaydırma, CSS, IntersectionObserver ve tek scroll güncellemesiyle çalışır. Kaydırma kontrolü ele geçirilmez. Azaltılmış hareket tercihi veya hareketi durdurma seçeneğinde sahneler normal belge akışındadır. Metinler animasyon beklerken gizlenmez.
+Ana sayfa tek açılış, kısa uzmanlık listesi, yayınlar ve iletişimden oluşur. Uzun, sabitlenen kaydırma sahneleri kullanılmaz. Hareketler CSS ve doğal kaydırmayla çalışır; azaltılmış hareket tercihi ve durdurma düğmesi desteklenir. Metinler animasyon beklerken gizlenmez. Özgün Boraden logosu ve favicon, markanın mevcut dosyalarıdır; logo oranı korunur.
 
 ## Yayına hazırlık
 
@@ -41,3 +41,5 @@ Hesaplamalar Design 6’daki sayısal mantığı kullanır. 2026 parametreleri 1
 Fotoğraflar kullanıcının `boradenphoto` arşivinden seçilmiştir; orijinaller değiştirilmez. Web sürümleri WebP olarak ölçeklenmiştir. Sadece toplantı, el sıkışma, belge çalışması ve ofis sahneleri kullanılır. Tipografi: Manrope ve Instrument Serif, mevcut yerel font varlıkları.
 
 Tasarım referansları: https://www.youtube.com/watch?v=39IlNR-P3-Q ve https://dribbble.com/tags/modern-website . Referanslardaki görseller kopyalanmamıştır.
+
+Özgün marka varlıkları: https://boraden.com.tr/upload/logo.png ve https://boraden.com.tr/favicon-96x96.png . Tam logo şeffaf zeminde beyaz yazı içerir; koyu başlık, menü ve alt bilgide doğal oranıyla kullanılır.

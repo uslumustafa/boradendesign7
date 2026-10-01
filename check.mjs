@@ -7,7 +7,7 @@ import http from 'node:http';
 import {server} from './server.mjs';
 import {build,root} from './src/build.mjs';
 import {content,archive,publications,dateTR} from './src/content.mjs';
-import {normalizeSearch,matchesSearch,sceneState} from './public/ui-core.js';
+import {normalizeSearch,matchesSearch} from './public/ui-core.js';
 import {vehicleSchedule} from './public/vehicle-core.js';
 
 test('complete standalone pages, links, metadata and factual schema',()=>{
@@ -95,16 +95,11 @@ test('production indexing is explicit and validates deployment origin',()=>{
   build();
 });
 
-test('Turkish search and scene boundaries',()=>{
+test('Turkish search',()=>{
   assert.equal(normalizeSearch('ŞİRKET DEĞERLEMESİ'),'sirket degerlemesi');
   assert.ok(matchesSearch('İnsan Kaynakları ve Bordro','insan bordro'));
   assert.ok(!matchesSearch('Vergi','bordro'));
   assert.ok(matchesSearch('Bağımsız Denetim','bagimsiz'));
-  assert.equal(sceneState(100,3300,1000).index,0);
-  assert.equal(sceneState(-800,3300,1000).index,1);
-  assert.equal(sceneState(-2300,3300,1000).index,2);
-  assert.equal(sceneState(-6000,3300,1000).progress,1);
-  assert.equal(sceneState(0,0,1000).progress,0);
 });
 
 test('calculator results, ceilings, rounding and rejected inputs',()=>{

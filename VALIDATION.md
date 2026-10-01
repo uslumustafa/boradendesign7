@@ -1,19 +1,18 @@
 # Doğrulama — 1 Ekim 2026
 
-`npm run check`: 5 kontrol geçti, 0 hata.
+Kullanıcının uzunluk, logo ve soluk renk geri bildiriminden sonra ana sayfa yeniden düzenlendi. Sabitlenen üç sahne ve tekrar eden tanıtım bölümleri kaldırıldı; tek açılış, altı uzmanlık bağlantısı, yayınlar/bilgi kısayolları ve kısa iletişim bölümü kaldı. Koyu lacivert başlık, canlı mavi açılış ve turuncu iletişim alanı kullanılır. Özgün logo ve favicon dosyaları korunmuş oranlarıyla gösterilir; logo resmi kaynakla birebir eşleşir.
 
-- 85 içerik sayfası ve 404 sayfası üretildi. 47 hizmet, 6 uzmanlık grubu, 12 yayın ve 247 arşiv belgesi kontrol edildi.
-- Her sayfada tek H1, Türkçe dil tanımı, açıklama, canonical, yapılandırılmış veri ve benzersiz HTML kimlikleri doğrulandı. Yerel bağlantılar, görseller, fontlar ve sayfa içi hedefler bulundu.
-- Önizleme indekslenmez. Üretim seçeneğinde sitemap 85 adres içerir; yanlış alan adı ve çıktı dizini reddedilir. Tarihi bilinmeyen belgelere tarih uydurulmaz.
-- Türkçe arama, kaydırma sahne sınırları, dört hesaplama aracının örnek sonuçları ve geçersiz girdiler kontrol edildi.
-- Yerel sunucuda GET/HEAD, yönlendirme, 404, yöntem kısıtı ve bozuk/gizli dizin istekleri doğrulandı.
+`npm run check`: 5 kontrol geçti, 0 hata. 85 içerik sayfası ve 404, 47 hizmet, 6 uzmanlık grubu, 12 yayın ve 247 belge; bağlantılar, görseller, fontlar, tek H1, Türkçe dil, meta veri, canonical, yapılandırılmış veri ve benzersiz kimlikler doğrulandı. Türkçe arama, hesaplamalar, geçersiz girdiler, sunucu yöntemleri/yönlendirmeleri ve güvenlik kontrolleri geçti. Önizleme indekslenmez; üretimde indeksleme açıkça etkinleştirilir.
 
-Tarayıcıda 1280 × 720 masaüstü ve 390 × 844 mobil görünüm incelendi. Ana sayfa sahneleri, uzmanlık açılır bölümleri, mobil menü, Escape ile kapatma ve odak dönüşü, Türkçe karakter kullanmadan arama, hizmet detayı, yayın dizini ve makale, arşiv arama/yıl filtresi, bilgi merkezi, hesaplama dizini, KDV sonucu, sektör raporları ve iletişim şablonları denendi. İncelenen HTML görünümlerinde yatay taşma, kırık fotoğraf veya uygulama kaynaklı tarayıcı hatası görülmedi.
+Tarayıcıda yeni ana sayfa:
 
-Uygulama içi tarayıcıda doğrudan PDF görüntülemesi doğrulanamadı. Arşiv bağlantıları belge numarasıyla adlandırılan PDF indirme bağlantıları olarak sunuldu. Örnek indirmede arşiv sayfası açık kaldı, doğru dosya adı kullanıldı ve indirilen dosyanın özgün PDF ile birebir aynı olduğu doğrulandı.
+- 406 × 844: önceki 9.734 piksel yerine 2.481 piksel; yaklaşık %75 kısalma.
+- 390 × 844: 2.510 piksel. Menü, Escape ile odak dönüşü, logo oranı, fotoğraf çerçeveleri ve tam sayfa görünümü kontrol edildi.
+- 1280 × 800: 2.224 piksel. Başlık, açılış ve bölüm yerleşimleri incelendi.
+- Bu görünümlerde yatay taşma ve kırık görsel görülmedi. Türkçe karakter kullanmadan şirket değerlemesi araması iki doğru sonuç verdi. Hizmet detayının ortak görünümü ayrıca incelendi.
 
-Hareketi durdurma düğmesi denendi; üç sahne normal akışta görünür ve erişilebilir kaldı. İşletim sistemi düzeyindeki azaltılmış hareket tercihi CSS ve uygulama kodunda desteklenir; bu tercih tarayıcı araçlarıyla ayrıca taklit edilmedi.
+Azaltılmış hareket CSS ile desteklenir; uzun sahne akışı artık yoktur. Hareket durdurma düğmesi önceki sürümde denenmişti; yeni kodda sahneye ait davranış kaldırılmıştır. İşletim sistemi tercihi ayrıca taklit edilmedi.
 
-Site başlıkları ve hizmet metinleri gözden geçirildi; tekrarlar ve arşiv başlıklarındaki belirgin yazım hataları düzeltildi. Özgün PDF dosyalarının içeriği değiştirilmedi. Hesaplamalar 2026 kapsamıyla sınırlandırıldı; sonuçlar ilgili sayfalardaki koşullara tabidir.
+Özgün PDF içerikleri değişmedi. Önceki doğrulamada örnek PDF indirildi, sayfa açık kaldı ve dosyanın özgün belgeyle birebir aynı olduğu görüldü. Hesaplamalar 2026 kapsamındadır.
 
-Bu doğrulama canlı alan adı yayını, arama sıralaması garantisi veya tüm tarayıcı/cihaz birleşimlerinin testi anlamına gelmez. GitHub’daki proje statik yayına hazır kaynak içerir.
+Değişen kod ve yeni marka varlıkları incelendi; bağımsız Codex incelemesinde somut regresyon bulunmadı. `git diff --check` temizdir. Bu kayıt canlı alan adı yayını, sıralama garantisi veya tüm cihaz/tarayıcı birleşimlerinin testi anlamına gelmez.
