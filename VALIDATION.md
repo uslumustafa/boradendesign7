@@ -8,7 +8,9 @@
 - Türkçe arama, kaydırma sahne sınırları, dört hesaplama aracının örnek sonuçları ve geçersiz girdiler kontrol edildi.
 - Yerel sunucuda GET/HEAD, yönlendirme, 404, yöntem kısıtı ve bozuk/gizli dizin istekleri doğrulandı.
 
-Tarayıcıda 1280 × 720 masaüstü ve 390 × 844 mobil görünüm incelendi. Ana sayfa sahneleri, uzmanlık açılır bölümleri, mobil menü, Escape ile kapatma ve odak dönüşü, Türkçe karakter kullanmadan arama, hizmet detayı, yayın dizini ve makale, arşiv arama/yıl filtresi, bilgi merkezi, hesaplama dizini, KDV sonucu, sektör raporları ve iletişim şablonları denendi. İncelenen görünümlerde yatay taşma veya kırık fotoğraf görülmedi; tarayıcı hata/uyarı kaydı bulunmadı.
+Tarayıcıda 1280 × 720 masaüstü ve 390 × 844 mobil görünüm incelendi. Ana sayfa sahneleri, uzmanlık açılır bölümleri, mobil menü, Escape ile kapatma ve odak dönüşü, Türkçe karakter kullanmadan arama, hizmet detayı, yayın dizini ve makale, arşiv arama/yıl filtresi, bilgi merkezi, hesaplama dizini, KDV sonucu, sektör raporları ve iletişim şablonları denendi. İncelenen HTML görünümlerinde yatay taşma, kırık fotoğraf veya uygulama kaynaklı tarayıcı hatası görülmedi.
+
+Uygulama içi tarayıcıda doğrudan PDF görüntülemesi doğrulanamadı. Arşiv bağlantıları belge numarasıyla adlandırılan PDF indirme bağlantıları olarak sunuldu. Örnek indirmede arşiv sayfası açık kaldı, doğru dosya adı kullanıldı ve indirilen dosyanın özgün PDF ile birebir aynı olduğu doğrulandı.
 
 Hareketi durdurma düğmesi denendi; üç sahne normal akışta görünür ve erişilebilir kaldı. İşletim sistemi düzeyindeki azaltılmış hareket tercihi CSS ve uygulama kodunda desteklenir; bu tercih tarayıcı araçlarıyla ayrıca taklit edilmedi.
 
