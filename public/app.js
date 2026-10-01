@@ -1,15 +1,41 @@
-import {matchesSearch,archivePageState} from './ui-core.js';
+import {matchesSearch,archivePageState,heroMotionAllowed} from './ui-core.js';
 
 const root=document.documentElement;
 root.classList.add('js');
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 let manualPause=false;
 const parallax=[...document.querySelectorAll('[data-parallax]')];
+const siteHeader=document.querySelector('.site-header');
+const heroStage=document.querySelector('[data-hero-stage]');
+const heroScenes=[...document.querySelectorAll('[data-hero-scene]')];
+const heroSelect=[...document.querySelectorAll('[data-hero-select]')];
+let heroIndex=0,heroVisibility=1,heroTimer;
 let scheduled=false;
+
+function showHeroScene(index,announce=false) {
+  heroIndex=(index+heroScenes.length)%heroScenes.length;
+  heroScenes.forEach((scene,i)=>{scene.classList.toggle('is-active',i===heroIndex);scene.setAttribute('aria-hidden',String(i!==heroIndex));});
+  heroSelect.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===heroIndex)));
+  document.querySelector('[data-hero-count]').textContent=`${String(heroIndex+1).padStart(2,'0')} / 03`;
+  if(announce) document.querySelector('[data-hero-announcement]').textContent=`${heroScenes[heroIndex].dataset.heroScene}, ${heroIndex+1} / 3`;
+}
+function syncHeroMotion() {
+  clearInterval(heroTimer);
+  const running=heroScenes.length>1 && heroMotionAllowed(root.classList.contains('motion-off'),document.hidden,heroVisibility,root.classList.contains('dialog-open'));
+  heroStage?.classList.toggle('scene-paused',!running);
+  if(running) {
+    heroTimer=setInterval(()=>showHeroScene(heroIndex+1),7000);
+  }
+}
+heroSelect.forEach(button=>button.addEventListener('click',()=>{showHeroScene(Number(button.dataset.heroSelect),true);syncHeroMotion();}));
+document.querySelector('[data-hero-next]')?.addEventListener('click',()=>{showHeroScene(heroIndex+1,true);syncHeroMotion();});
+document.addEventListener('visibilitychange',syncHeroMotion);
 
 function renderScroll() {
   scheduled=false;
   const stopped=root.classList.contains('motion-off');
+  siteHeader.classList.toggle('is-scrolled',scrollY>40);
+  if(heroStage) heroStage.style.setProperty('--hero-shift',stopped?'0px':Math.min(55,scrollY*.15)+'px');
   parallax.forEach(el=>{
     const rect=el.getBoundingClientRect();
     if(!stopped && rect.bottom>0 && rect.top<innerHeight) el.style.setProperty('--parallax',Math.max(-30,Math.min(30,(innerHeight/2-rect.top-rect.height/2)*.06))+'px');
@@ -25,6 +51,7 @@ function setMotion() {
     button.innerHTML=reduced.matches ? 'Azaltılmış hareket etkin' : stopped ? 'Hareketi başlat <span aria-hidden="true">▷</span>' : 'Hareketi durdur <span aria-hidden="true">Ⅱ</span>';
   });
   scheduleScroll();
+  syncHeroMotion();
 }
 document.querySelectorAll('[data-motion]').forEach(b=>b.addEventListener('click',()=>{manualPause=!manualPause;setMotion();}));
 reduced.addEventListener('change',setMotion);
@@ -33,6 +60,7 @@ addEventListener('scroll',scheduleScroll,{passive:true});
 addEventListener('resize',scheduleScroll);
 addEventListener('pageshow',scheduleScroll);
 if('IntersectionObserver' in window) {
+  if(heroStage) new IntersectionObserver(([entry])=>{heroVisibility=entry.intersectionRatio;syncHeroMotion();},{threshold:.2}).observe(heroStage);
   const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
     if(entry.isIntersecting){entry.target.classList.add('is-revealed');observer.unobserve(entry.target);}
   }),{threshold:.12});
@@ -43,11 +71,12 @@ document.querySelectorAll('[data-dialog]').forEach(button=>button.addEventListen
   const dialog=document.getElementById(button.dataset.dialog);
   dialog.showModal();
   root.classList.add('dialog-open');
+  syncHeroMotion();
   if(dialog.id==='search-dialog') dialog.querySelector('input').focus();
 }));
 document.querySelectorAll('dialog').forEach(dialog=>{
   dialog.querySelector('[data-close]').addEventListener('click',()=>dialog.close());
-  dialog.addEventListener('close',()=>root.classList.remove('dialog-open'));
+  dialog.addEventListener('close',()=>{root.classList.remove('dialog-open');syncHeroMotion();});
   dialog.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>dialog.close()));
   dialog.addEventListener('click',event=>{
     if(event.target!==dialog) return;
