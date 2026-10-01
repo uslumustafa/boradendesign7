@@ -7,7 +7,7 @@ import http from 'node:http';
 import {server} from './server.mjs';
 import {build,root} from './src/build.mjs';
 import {content,archive,publications,dateTR} from './src/content.mjs';
-import {normalizeSearch,matchesSearch,archivePageState,heroMotionAllowed,cardLightingPosition} from './public/ui-core.js';
+import {normalizeSearch,matchesSearch,archivePageState,heroMotionAllowed,cardLightingPosition,worldLabelPosition} from './public/ui-core.js';
 import {vehicleSchedule} from './public/vehicle-core.js';
 
 test('complete standalone pages, links, metadata and factual schema',()=>{
@@ -26,6 +26,16 @@ test('complete standalone pages, links, metadata and factual schema',()=>{
     assert.match(html,/<meta name="description" content="[^"]+">/);
     assert.match(html,/<link rel="canonical" href="https:\/\/boraden.com.tr\/[^\"]*">/);
     assert.match(html,/<meta name="robots" content="noindex,nofollow">/);
+    const header=html.match(/<header class="site-header">(.*?)<\/header>/s)[1];
+    const mobileMenu=html.match(/<dialog id="menu-dialog"(.*?)<\/dialog>/s)[1];
+    assert.equal((header.match(/name="site-navigation"/g)||[]).length,2,page.path+' exclusive navigation groups');
+    for(const href of ['/yayinlar/','/perspektifler/','/bilgi-merkezi/','/hesaplama/','/arsiv/','/sektorler/']) {
+      assert.ok(header.includes('href="'+href+'"'),page.path+' desktop access '+href);
+      assert.ok(mobileMenu.includes('href="'+href+'"'),page.path+' mobile access '+href);
+    }
+    if(['/perspektifler/','/hesaplama/','/arsiv/','/blog/','/haberler/','/sirkuler/','/duyurular/'].some(prefix=>page.path.startsWith(prefix))) {
+      assert.match(header,/<summary class="is-active">Bilgi Merkezi<\/summary>/,page.path+' active knowledge section');
+    }
     const schema=JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1]);
     assert.equal(schema['@graph'][0].legalName,content.about.name);
     assert.ok(schema['@graph'].some(n=>n['@type']==='WebSite'));
@@ -133,6 +143,12 @@ test('Turkish search, archive pagination and safe photo motion',()=>{
   const lighting=cardLightingPosition(-40,200,100,50);
   assert.ok(lighting.x>=0 && lighting.x<=100 && lighting.y>=0 && lighting.y<=100);
   assert.ok(Math.abs(lighting.rotateX)<=2 && Math.abs(lighting.rotateY)<=2);
+  assert.deepEqual(worldLabelPosition(50,50,100,100,30,20,true),{left:62,top:40});
+  for(const origin of [true,false])for(const x of [-50,50,150])for(const y of [-50,50,150]) {
+    const label=worldLabelPosition(x,y,100,100,30,20,origin);
+    assert.ok(label.left>=5 && label.left+30<=95,'world label horizontal clipping');
+    assert.ok(label.top>=5 && label.top+20<=95,'world label vertical clipping');
+  }
 });
 
 test('calculator results, ceilings, rounding and rejected inputs',()=>{

@@ -2,6 +2,8 @@
 
 Yeni kurumsal site. İçerik kaynağı Design 6; tasarım ve sayfa üretimi sıfırdan hazırlanmıştır. Kişi profilleri veya tek kişilik portreler içermez.
 
+Tasarımın ortak paleti lacivert, beyaz ve kontrollü mavidir. Koyu Manrope tipografisi korunur; özgün logo tek lacivert navbar üzerinde doğal oranıyla gösterilir. Hizmetler ve Bilgi Merkezi açılır menüleri, mobil menü, arama, kartlar ve iç sayfalar aynı renk tanımlarını kullanır. Yayınlar, perspektifler, hesaplamalar, arşiv ve sektör raporlarına masaüstünden ve mobilden doğrudan erişilir.
+
 Node.js 20 veya sonrası yeterlidir. Haricî paket kurulumu gerekmez.
 
 ```sh

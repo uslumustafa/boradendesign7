@@ -50,3 +50,9 @@ Design 6’daki 14 `perspectives` kaydı; kişi, portre, biyografi ve alıntı a
 12 benzersiz birincil kaynak kontrol edildi; dört PDF’nin metni incelendi. Eski 2001 Nobel sayfasının üç kullanımı güncel canonical kaynağa yönlendirildi. Yalnız Buffett mektubunun doğrulanmış kaynak tarihi gösterilir. Kaynak tarihi Boraden yayın tarihi sayılmaz.
 
 Jev, gerçek küre + portresiz kaynaklı okumalar yönünü `source_identity` olarak seçti. ORBIST kaynağı `label_only` sınıfındadır. Bunlar Codex’in kararına girdidir, tasarım kalitesi ölçümü değildir. Codex üç `hâle` yazımını düzeltti; ardından 194 benzersiz yeni metin parçasının Jev taramasında 0,70 hata eşiğinde bulgu yoktu.
+
+## Renk ve gezinme düzeninin bütünleştirilmesi
+
+Kullanıcının uyumsuz renk ve zayıf navbar geri bildirimi üzerine lime/yeşil vurgular çıkarıldı; lacivert, beyaz ve tek mavi vurgu bütün sayfalarda ortak tanımlara bağlandı. Özgün beyaz logo tek lacivert başlık üzerinde, beğenilen koyu Manrope ise açık içerik yüzeylerinde korunur. Dünya motifi kartları lacivert, açık mavi ve mavi yüzeylerle aynı aile içinde ayrılır. Uzun ömür hedefi okunaklı tipografi, belirgin oranlar ve işlevsel gezinmeyle ele alınır; belirli bir yıl boyunca güncellik garantisi verilmez.
+
+Hizmetler ve Bilgi Merkezi iki native açılır menüyle sunulur. Mobil menü ve aramada da aynı bölümlere doğrudan ulaşılır. Menü açıkken mevcut fotoğraf/küre hareket kapısı kullanılır; yeni paket veya ayrı bir animasyon motoru eklenmemiştir. Jev yön seçimi ve dokuz yeni kısa menü metninin taraması için kullanıldı; son karar ve görsel inceleme Codex tarafından yapıldı.

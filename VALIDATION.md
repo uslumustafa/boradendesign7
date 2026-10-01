@@ -1,5 +1,17 @@
 # Doğrulama — 1 Ekim 2026
 
+## Renk ve gezinme düzeni: son sürüm
+
+- Tek ortak palet: lacivert `#14243A`, koyu metin `#111827`, mavi `#275BD1`, beyaz ve nötr açık gri. Lime/yeşil büyük yüzeyler ve farklı mavi/mor kart zeminleri kaldırıldı. Manrope, özgün logo, dünya, ORBIST, fotoğraflar ve bütün veriler korunur.
+- İki native açılır menü aynı `name` grubunu kullanır. Hizmetlerde altı alan, Bilgi Merkezi’nde altı içerik bölümü vardır. Mobilde yedi ana bağlantıya hesaplama, arşiv ve sektör bağlantıları eklenmiştir. Yayın kategori ve ayrıntılarında doğru üst bölüm etkin görünür; `aria-current` yalnız tam sayfa eşleşmesinde verilir.
+- Gerçek tarayıcıda 1280px masaüstü, 1081 × 480 dar masaüstü, 320 × 780 ve 390 × 844 mobil denetlendi; yatay taşma sıfır. 1081px menü paneli ekran içine sığar; mobil geçişte açık menüler kapanır. Mobil arama ve menü hedefleri 44px yüksekliğindedir.
+- İki menü arasında geçiş, Escape/odak dönüşü, dış tıklama, Türkçe `SİRKÜLER ARŞİVİ` araması ve doğrudan mobil arşiv bağlantısı kontrol edildi. Açık Bilgi Merkezi menüsü, elle durdurma kapalıyken küre etiket koordinatlarını sabit tuttu; kapanışta hareket devam etti.
+- Mavi kartlardaki küçük metinler ve hover düğmeleri beyazdır. Beyaz mega panelde klavye odak çizgisi mavidir; koyu navbar üzerinde açık mavidir. Beyaz/mavi kontrastı yaklaşık 5,99:1’dir. 390px küre etiketinin kenarda kesilmesi ortak konum hesabıyla düzeltildi; iki etiket ve dört kenar için çalışan sınır kontrolü eklendi.
+- `npm run check`: 5 kontrol geçti, 0 hata. Her sayfada masaüstü/mobil içerik erişimi ve kategori/ayrıntı etkin menüsü de doğrulanır. 101 sayfa, 100 sitemap girdisi, 47 hizmet, 14 perspektif, 247 belge ve hesaplama kontrolleri korunur.
+- Jev ortak lacivert/beyaz/mavi yönünü seçmede kullanıldı. Dokuz yeni menü metninin taramasında 0,70 eşiğinde bulgu yok; en yüksek hata olasılığı 0,23. İki bağımsız Codex incelemesindeki kontrast ve etkin kategori bulguları düzeltildi.
+
+Bu sürümün gerçek ekranları yerel `../output/design7-palette-review/` klasöründedir; ana sayfa, masaüstü açılır menü, mobil menü/arama/arşiv, dünya ve perspektifler kaydedilmiştir. Önceki doğrulamalar aşağıda korunur.
+
 Ana sayfaya gerçek Design 6 kaynağından Türkiye merkezli gece küresi, ORBIST adı/İngiltere etiketi ve Dünyadan Perspektifler geri alındı. Küre ikinci ana sahnedir; 14 okuma notu portresiz dünya motifli kartlarla ve ayrı detay sayfalarıyla sunulur. Mevcut büyük fotoğraf açılışı, altı asimetrik uzmanlık kartı, iç sayfa dili, yayınlar, araçlar, 247 belge ve hesaplama mantığı korunur. Referans gözlemleri DESIGN_REFERENCES.md içinde kayıtlıdır.
 
 `npm run check`: 5 kontrol geçti, 0 hata. 100 içerik sayfası ve 404, 47 hizmet, 6 uzmanlık grubu, 12 yayın, 14 perspektif ve 247 belge; bağlantılar, görseller, fontlar, tek H1, Türkçe dil, meta veri, canonical, yapılandırılmış veri ve benzersiz kimlikler doğrulandı. Perspektiflerin Article citation alanları ve tarih sınırları kontrol edilir. Türkçe arama, filtreli arşiv sayfalama sınırları, hesaplamalar, geçersiz girdiler ve sunucu güvenlik kontrolleri geçti. Önizleme indekslenmez; üretimde indeksleme açıkça etkinleştirilir.
