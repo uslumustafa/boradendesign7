@@ -6,6 +6,11 @@ export function matchesSearch(text, query) {
   return normalizeSearch(query).split(/\s+/).every(word=>haystack.includes(word));
 }
 export const heroMotionAllowed=(paused,pageHidden,visibleFraction,dialogOpen)=>!paused && !pageHidden && visibleFraction>=.2 && !dialogOpen;
+export function worldLabelPosition(x,y,width,height,labelWidth,labelHeight,origin) {
+  const left=origin?x+12:x-labelWidth;
+  const top=origin?y-labelHeight/2:y-labelHeight*1.15;
+  return {left:Math.max(5,Math.min(width-labelWidth-5,left)),top:Math.max(5,Math.min(height-labelHeight-5,top))};
+}
 export function cardLightingPosition(x,y,width,height) {
   const px=width>0?Math.max(0,Math.min(1,x/width)):.5;
   const py=height>0?Math.max(0,Math.min(1,y/height)):.5;

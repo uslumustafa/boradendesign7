@@ -1,4 +1,4 @@
-import { heroMotionAllowed } from './ui-core.js';
+import { heroMotionAllowed, worldLabelPosition } from './ui-core.js';
 
 const section=typeof document==='undefined'?null:document.querySelector('section.world');
 if(section) prepareWorld(section);
@@ -71,11 +71,12 @@ async function startWorld(section,stage) {
   const home=new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1,0,0),39*Math.PI/180)
     .multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,1,0),Math.atan2(-turkey.x,turkey.z)));
   globe.quaternion.copy(home);
-  const origin=new THREE.Mesh(new THREE.SphereGeometry(.012,16,12),new THREE.MeshBasicMaterial({color:0xcdeb91}));
+  const accent=new THREE.Color(getComputedStyle(document.documentElement).getPropertyValue('--blue-light').trim());
+  const origin=new THREE.Mesh(new THREE.SphereGeometry(.012,16,12),new THREE.MeshBasicMaterial({color:accent}));
   origin.position.copy(turkey);
   globe.add(origin);
   const ring=new THREE.Mesh(new THREE.RingGeometry(.022,.028,40),new THREE.MeshBasicMaterial({
-    color:0xcdeb91,side:THREE.DoubleSide,transparent:true,opacity:.8
+    color:accent,side:THREE.DoubleSide,transparent:true,opacity:.8
   }));
   ring.position.copy(turkey.clone().multiplyScalar(1.002));
   ring.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),turkey.clone().normalize());
@@ -108,8 +109,10 @@ async function startWorld(section,stage) {
       const front=p.z>1.5*1.5/camera.position.z;
       p.project(camera);
       label.style.opacity=front?'1':'0';
-      label.style.left=(p.x*.5+.5)*stage.clientWidth+'px';
-      label.style.top=(-p.y*.5+.5)*stage.clientHeight+'px';
+      const position=worldLabelPosition((p.x*.5+.5)*stage.clientWidth,(-p.y*.5+.5)*stage.clientHeight,
+        stage.clientWidth,stage.clientHeight,label.offsetWidth,label.offsetHeight,label===originLabel);
+      label.style.left=position.left+'px';
+      label.style.top=position.top+'px';
     }
     renderer.render(scene,camera);
   }
