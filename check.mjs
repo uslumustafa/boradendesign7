@@ -7,7 +7,7 @@ import http from 'node:http';
 import {server} from './server.mjs';
 import {build,root} from './src/build.mjs';
 import {content,archive,publications,dateTR} from './src/content.mjs';
-import {normalizeSearch,matchesSearch} from './public/ui-core.js';
+import {normalizeSearch,matchesSearch,archivePageState} from './public/ui-core.js';
 import {vehicleSchedule} from './public/vehicle-core.js';
 
 test('complete standalone pages, links, metadata and factual schema',()=>{
@@ -95,11 +95,20 @@ test('production indexing is explicit and validates deployment origin',()=>{
   build();
 });
 
-test('Turkish search',()=>{
+test('Turkish search and filtered archive pagination',()=>{
   assert.equal(normalizeSearch('ŞİRKET DEĞERLEMESİ'),'sirket degerlemesi');
   assert.ok(matchesSearch('İnsan Kaynakları ve Bordro','insan bordro'));
   assert.ok(!matchesSearch('Vergi','bordro'));
   assert.ok(matchesSearch('Bağımsız Denetim','bagimsiz'));
+  const records=Array.from({length:247},(_,i)=>({text:i%2?'Şirket Değerlemesi':'KDV',year:i<100?'2022':'2021'}));
+  const first=archivePageState(records,'','');
+  assert.equal(first.count,247);assert.equal(first.pages,21);assert.deepEqual(first.indices,[0,1,2,3,4,5,6,7,8,9,10,11]);
+  const last=archivePageState(records,'','',99);
+  assert.equal(last.current,21);assert.deepEqual(last.indices,[240,241,242,243,244,245,246]);
+  const filtered=archivePageState(records,'sirket degerlemesi','2022',99);
+  assert.equal(filtered.count,50);assert.equal(filtered.current,5);assert.deepEqual(filtered.indices,[97,99]);
+  assert.equal(archivePageState(records,'','',-3).current,1);
+  assert.deepEqual(archivePageState(records,'olmayan','2022').indices,[]);
 });
 
 test('calculator results, ceilings, rounding and rejected inputs',()=>{

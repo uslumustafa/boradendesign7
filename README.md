@@ -22,7 +22,7 @@ npm start
 - `public/`: hareket, erişilebilir etkileşimler, hesaplamalar ve optimize edilmiş varlıklar.
 - `check.mjs`: içerik, bağlantı, meta veri, arama ve hesaplama kontrolleri.
 
-Ana sayfa tek açılış, kısa uzmanlık listesi, yayınlar ve iletişimden oluşur. Uzun, sabitlenen kaydırma sahneleri kullanılmaz. Hareketler CSS ve doğal kaydırmayla çalışır; azaltılmış hareket tercihi ve durdurma düğmesi desteklenir. Metinler animasyon beklerken gizlenmez. Özgün Boraden logosu ve favicon, markanın mevcut dosyalarıdır; logo oranı korunur.
+Ana sayfa tek açılış, altı alan arasında seçilen hizmet paneli, yayınlar ve iletişimden oluşur. Hizmet seçimi doğal HTML radio alanları ve CSS ile çalışır; JavaScript gerektirmez. Arşivde arama/yıl filtresiyle 12 belge gösterilir; JavaScript kapalıyken 247 özgün belge bağlantısı okunabilir. Hareketler CSS ile çalışır; azaltılmış hareket tercihi ve durdurma düğmesi desteklenir. Metinler animasyon beklerken gizlenmez. Özgün Boraden logosu ve favicon, markanın mevcut dosyalarıdır; logo oranı korunur.
 
 ## Yayına hazırlık
 
@@ -40,6 +40,6 @@ Hesaplamalar Design 6’daki sayısal mantığı kullanır. 2026 parametreleri 1
 
 Fotoğraflar kullanıcının `boradenphoto` arşivinden seçilmiştir; orijinaller değiştirilmez. Web sürümleri WebP olarak ölçeklenmiştir. Sadece toplantı, el sıkışma, belge çalışması ve ofis sahneleri kullanılır. Tipografi: Manrope ve Instrument Serif, mevcut yerel font varlıkları.
 
-Tasarım referansları: https://www.youtube.com/watch?v=39IlNR-P3-Q ve https://dribbble.com/tags/modern-website . Referanslardaki görseller kopyalanmamıştır.
+Tasarım referansları: https://www.youtube.com/watch?v=39IlNR-P3-Q ve kullanıcının beş Dribbble örneği. Somut gözlemler ve uygulamalar [DESIGN_REFERENCES.md](DESIGN_REFERENCES.md) içinde kayıtlıdır. Ana görsel yön OneText’in derinlik ve katman yaklaşımıdır; referans görselleri kopyalanmamıştır.
 
 Özgün marka varlıkları: https://boraden.com.tr/upload/logo.png ve https://boraden.com.tr/favicon-96x96.png . Tam logo şeffaf zeminde beyaz yazı içerir; koyu başlık, menü ve alt bilgide doğal oranıyla kullanılır.
