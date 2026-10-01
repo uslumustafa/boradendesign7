@@ -2405,5 +2405,407 @@
     "district": "Zeytinburnu",
     "city": "İstanbul",
     "country": "Türkiye"
-  }
+  },
+  "world": {
+    "title": "Yerel birikim. Dünya perspektifi.",
+    "orbist": "ORBIST",
+    "country": "İngiltere",
+    "origin": "Türkiye",
+    "note": "Türkiye–İngiltere çizgisi temsilidir; şube ağını veya kesin ofis adreslerini göstermez.",
+    "textureSource": "https://science.nasa.gov/earth/earth-observatory/earth-at-night/maps/"
+  },
+  "perspectives": [
+    {
+      "id": "warren-buffett-deger-ve-fiyat",
+      "title": "Fiyatı görmek. Değeri anlamak.",
+      "topic": "DEĞER & UZUN VADE",
+      "summary": "Warren Buffett’ın 1989 mektubundan, şirket değerlemesinde daha iyi sorular sormaya uzanan bir okuma.",
+      "intro": "Bir fiyat teklifini görmek kolaydır. O teklifin dayandığı işletmeyi, nakit üretme kapasitesini ve belirsizlikleri anlamak ise daha dikkatli bir bakış ister.",
+      "sections": [
+        [
+          "İşletmeniz için hangi soruya dönüşür?",
+          "Bir ortaklık görüşmesinde ilk soru, teklif edilen tutarın hangi pay ve hakları kapsadığıdır. Şirketin faaliyetleri, finansmanı ve işlem yapısı aynı hesapta karıştırılırsa aynı rakama farklı anlamlar yüklenebilir. Bu nedenle önce değerleme tarihi, amaç ve pay kapsamı yazılı hâle getirilmelidir."
+        ],
+        [
+          "Rakamın arkasını görün",
+          "Son dönem finansal tabloları ile iş planı arasında bir bağ arayın. Satış beklentisi hangi müşterilere, maliyet öngörüsü hangi sözleşmelere, yatırım ihtiyacı hangi kapasiteye dayanıyor? Bir varsayımın kaynağını gösterebilmek, yalnızca ayrıntılı bir hesap tablosu hazırlamaktan daha işe yarar bir başlangıçtır."
+        ],
+        [
+          "Tek sonuç yerine açıklanabilir çerçeve",
+          "Sonuç değiştiğinde hangi varsayımın etkili olduğunu görebilmek gerekir. Borç, nakit, işletme sermayesi ve faaliyet dışı kalemlerin nasıl ele alındığını açıkça sormak; değerleme görüşüyle pazarlık sonucunu birbirinden ayırmaya yardımcı olur."
+        ]
+      ],
+      "sourceTitle": "Berkshire Hathaway · 1989 hissedar mektubu",
+      "source": "https://www.berkshirehathaway.com/letters/1989.html",
+      "sourceSummary": "Mektup, bir işletmeyi değerlendirirken bilançodaki tutarın tek başına yeterli olmadığını anlatır. Gelecekteki nakit giriş ve çıkışlarıyla işletmenin ekonomik özellikleri birlikte düşünülür. Buffett, geçmişteki yüksek büyüme hızının gelecekte aynı ölçüde sürmeyebileceğini de açıkça belirtir.",
+      "takeaway": "Bir rakamı tartışmadan önce, o rakamın hangi soruya cevap verdiğini netleştirin.",
+      "questions": [
+        "Değerleme hangi tarih ve işlem için yapılıyor?",
+        "Varsayımlar hangi veriyle destekleniyor?",
+        "Şirket değeri ile pay değeri nasıl ilişkilendiriliyor?"
+      ],
+      "service": "sirket-degerlemesi",
+      "sourceDate": "1990-03-02",
+      "sourceDateVerified": true
+    },
+    {
+      "id": "daniel-kahneman-karar-ve-belirsizlik",
+      "title": "İyi karar, iyi bir soruyla başlar.",
+      "topic": "KARAR & BELİRSİZLİK",
+      "summary": "Daniel Kahneman’ın karar verme çalışmalarından, yönetim toplantılarında varsayımları görünür kılmaya uzanan Türkçe bir perspektif.",
+      "intro": "Aynı tabloya bakan iki kişi farklı sonuçlara ulaşabilir. Verinin yanında, o veriyi nasıl seçtiğimiz ve nasıl yorumladığımız da kararın parçasıdır.",
+      "sections": [
+        [
+          "Toplantıya bir sonuçla değil, bir çerçeveyle gelin",
+          "Yönetim raporunu hazırlarken karar verilecek konuyu ilk sayfada yazmak işe yarar. “Satışlar arttı” bilgisi ile “Yeni kapasiteye yatırım yapmalı mıyız?” sorusu aynı şey değildir. Kararın gerektirdiği veri, dönem ve alternatifler baştan belirlenirse toplantının odağı daha kolay korunur."
+        ],
+        [
+          "Varsayımı, gözlemden ayırın",
+          "Gerçekleşen satış, tahmin edilen satış ve hedeflenen satış raporda ayrı gösterilmelidir. Bir yönetici tahmini veri gibi okursa, hesapların doğru olması tek başına yeterli olmaz. Kaynak ve tarih etiketleri, bu ayrımı görünür kılmanın basit yollarıdır."
+        ],
+        [
+          "Karşı görüş için yer açın",
+          "Karar notuna “Hangi bilgi bu görüşümüzü değiştirirdi?” sorusunu eklemek, alternatiflerin konuşulmasına alan açar. Bu bir başarı garantisi veya bilimsel ölçüm iddiası değildir; farklı ekiplerin aynı veriyi tartışabilmesi için önerilen bir çalışma alışkanlığıdır."
+        ]
+      ],
+      "sourceTitle": "NobelPrize.org · 2002 ekonomi bilimleri ödül duyurusu",
+      "source": "https://www.nobelprize.org/prizes/economic-sciences/2002/press-release/",
+      "sourceSummary": "Ödül duyurusu, Kahneman’ın psikoloji ile ekonomik karar verme arasındaki ilişkiye katkısını açıklar. Belirsizlik altındaki yargılarda kullanılan zihinsel kestirmeler, her zaman standart ekonomik modellerin öngördüğü sonuçlara götürmez. Metin, deneysel ekonomi çalışmalarıyla ödülü paylaşan Vernon L. Smith’in katkısını ayrıca ele alır.",
+      "takeaway": "Gözlem, varsayım ve kararı aynı sütuna yazmayın.",
+      "questions": [
+        "Neyi biliyoruz?",
+        "Neyi varsayıyoruz?",
+        "Hangi yeni bilgi kararımızı değiştirir?"
+      ],
+      "service": "yonetim-danismanligi"
+    },
+    {
+      "id": "richard-thaler-insan-ve-sistem",
+      "title": "Sistemi insanla birlikte düşünün.",
+      "topic": "İNSAN & DAVRANIŞ",
+      "summary": "Richard Thaler’ın davranışsal ekonomi çalışmalarından, daha anlaşılır iş akışları tasarlamaya uzanan Türkçe bir okuma.",
+      "intro": "Bir sürecin kâğıt üzerinde doğru olması, günlük hayatta kolay uygulanacağı anlamına gelmez. İyi bir işleyiş, insanların karar verirken karşılaştığı koşulları da dikkate alır.",
+      "sections": [
+        [
+          "Sorumluluğu görünür hâle getirin",
+          "Bir bordro döngüsünde veriyi hazırlayan, kontrol eden ve onaylayan kişinin belli olması gerekir. “İnsan kaynakları gönderir” gibi genel bir ifade yerine sorumlu rol, teslim tarihi ve gerekli belgeyi birlikte tanımlamak, işin nerede beklediğini görmeyi kolaylaştırır."
+        ],
+        [
+          "Doğru adımı anlaşılır kılın",
+          "Bir onay ekranında hangi dönemin incelendiği, nelerin değiştiği ve sonraki adımın ne olduğu açık olmalıdır. Bu yaklaşım, kişiyi farkında olmadığı bir seçime yönlendirmek için kullanılmamalıdır. Amaç, bilgiye dayalı ve izlenebilir bir karar ortamı oluşturmaktır."
+        ],
+        [
+          "Süreci yalnızca hızla ölçmeyin",
+          "İşin ne kadar sürede tamamlandığına ek olarak geri dönen kayıtları, eksik verinin nedenini ve tekrar yapılan kontrolleri de izleyebilirsiniz. Burada önerilen göstergeler Boraden’e ait performans verisi değildir; işletmenizin kendi başlangıç ölçümünü tasarlaması için örnek bir çerçevedir."
+        ]
+      ],
+      "sourceTitle": "NobelPrize.org · 2017 ekonomi bilimleri ödül duyurusu",
+      "source": "https://www.nobelprize.org/prizes/economic-sciences/2017/press-release/",
+      "sourceSummary": "Ödül duyurusunda sınırlı rasyonellik, sosyal tercihler ve öz denetim gibi insani özelliklerin ekonomik kararlara etkisi anlatılır. Zihinsel muhasebe, insanların kararları bütün etkileri yerine ayrı hesaplar içinde değerlendirmesini açıklayan katkılarından biridir.",
+      "takeaway": "Bir süreci tasarlarken yalnızca adımları değil, o adımları uygulayan insanı da düşünün.",
+      "questions": [
+        "Bir sonraki adım açık mı?",
+        "Kimin onay vereceği belli mi?",
+        "Hata veya eksik bilgi geri bildirimi anlaşılır mı?"
+      ],
+      "service": "insan-kaynaklari-ve-bordro"
+    },
+    {
+      "id": "claudia-goldin-emek-ve-firsat",
+      "title": "Yeteneğe alan açmak.",
+      "topic": "İNSAN & FIRSAT",
+      "summary": "Bir insan kaynakları raporunda yalnız toplam çalışan sayısını görmek yeterli olmayabilir. İşe giriş, eğitim, terfi ve ayrılma aşamalarını ayrı izlemek; ekibin deneyimini daha iyi anlamaya yardımcı olur.",
+      "intro": "Çalışma hayatındaki sonuçları anlamak için, insanların karşılaştığı koşulları da görünür kılmak gerekir.",
+      "sections": [
+        [
+          "Sayıların arkasındaki yolculuk",
+          "Bir insan kaynakları raporunda yalnız toplam çalışan sayısını görmek yeterli olmayabilir. İşe giriş, eğitim, terfi ve ayrılma aşamalarını ayrı izlemek; ekibin deneyimini daha iyi anlamaya yardımcı olur."
+        ],
+        [
+          "Karşılaştırmanın kapsamını belirleyin",
+          "Aynı unvan her zaman aynı sorumluluk anlamına gelmez. Ücret veya gelişim fırsatlarını değerlendirirken görev, kıdem ve çalışma koşullarını açıklayın. Tek bir ortalamadan şirket hakkında kesin sonuç çıkarmayın."
+        ]
+      ],
+      "sourceTitle": "NobelPrize.org · 2023 ekonomi bilimleri ödülü, kamuoyu bilgisi",
+      "source": "https://www.nobelprize.org/uploads/2023/10/popular-economicsciencesprize2023.pdf",
+      "sourceSummary": "Goldin’in tarihsel araştırmaları, kadınların çalışma hayatını eğitim, aile sorumlulukları, ekonomik dönüşüm ve toplumsal koşullarla birlikte inceler.",
+      "takeaway": "Yeteneği konuşurken, fırsatlara erişimi de konuşun.",
+      "questions": [
+        "Hangi aşamada farklılık oluşuyor?",
+        "Karşılaştırılan roller gerçekten benzer mi?",
+        "Veriler hangi dönemi kapsıyor?"
+      ],
+      "service": "insan-kaynaklari-ve-bordro"
+    },
+    {
+      "id": "elinor-ostrom-ortak-sorumluluk",
+      "title": "Ortak işin, ortak kuralları.",
+      "topic": "YÖNETİŞİM & SORUMLULUK",
+      "summary": "Ortak bir raporda veriyi hazırlayan, kontrol eden ve onaylayan roller belirsizse iş herkesin sorumluluğu gibi görünür. Oysa günlük kullanımda görev sınırlarını açıkça yazmak gerekir.",
+      "intro": "Birlikte kullanılan kaynaklar, birlikte anlaşılmış sorumluluklar gerektirir.",
+      "sections": [
+        [
+          "Bir dosyanın sahibi kim?",
+          "Ortak bir raporda veriyi hazırlayan, kontrol eden ve onaylayan roller belirsizse iş herkesin sorumluluğu gibi görünür. Oysa günlük kullanımda görev sınırlarını açıkça yazmak gerekir."
+        ],
+        [
+          "Kuralları uygulayanları dinleyin",
+          "Yeni bir onay akışını kâğıt üzerinde bitirmeden önce onu her gün kullanacak ekiple değerlendirin. Hangi adımın neden bulunduğunu açıklayın; işe yaramayan tekrarları görünür hâle getirin."
+        ]
+      ],
+      "sourceTitle": "NobelPrize.org · 2009 ekonomi bilimleri ödülü, kamuoyu bilgisi",
+      "source": "https://www.nobelprize.org/uploads/2018/06/popular-economicsciences2009.pdf",
+      "sourceSummary": "Ostrom’un araştırmaları, ortak kaynakları kullanan toplulukların kurallar, katılım ve izleme yoluyla kendi yönetim düzenlerini oluşturabildiğini gösterir.",
+      "takeaway": "İş birliği, açık kurallarla güçlenir.",
+      "questions": [
+        "Hangi kaynak ortak kullanılıyor?",
+        "Sorumluluklar açık mı?",
+        "Geri bildirim nasıl toplanıyor?"
+      ],
+      "service": "yonetim-danismanligi"
+    },
+    {
+      "id": "amartya-sen-insan-ve-olcum",
+      "title": "Bir göstergeden daha fazlası.",
+      "topic": "ÖLÇÜM & İNSAN",
+      "summary": "Bir bölümün ortalama iş yükü makul görünürken bazı çalışanlar çok farklı bir deneyim yaşayabilir. Dağılımları ve istisnaları görmek, tek sayıyla yetinmemeyi sağlar.",
+      "intro": "Ne ölçtüğümüz kadar, ölçümün dışında ne kaldığı da önemlidir.",
+      "sections": [
+        [
+          "Ortalamanın gizlediklerine bakın",
+          "Bir bölümün ortalama iş yükü makul görünürken bazı çalışanlar çok farklı bir deneyim yaşayabilir. Dağılımları ve istisnaları görmek, tek sayıyla yetinmemeyi sağlar."
+        ],
+        [
+          "Göstergeyi amacıyla birlikte okuyun",
+          "Bir metriği rapora eklerken hangi kararı desteklediğini yazın. Her bilgi tek puana indirgenmek zorunda değildir. Açıklayıcı notlar bazen yeni bir sayıdan daha değerlidir."
+        ]
+      ],
+      "sourceTitle": "NobelPrize.org · 1998 ekonomi bilimleri ödül duyurusu",
+      "source": "https://www.nobelprize.org/prizes/economic-sciences/1998/press-release/?app=true",
+      "sourceSummary": "Sen’in çalışmaları sosyal seçim, refahın dağılımı ve yoksulluğun ölçülmesi gibi konuları ele alır; değerlendirmelerin hangi bilgiyi içerdiği önem taşır.",
+      "takeaway": "Ölçüyü seçmeden önce, amacı netleştirin.",
+      "questions": [
+        "Gösterge neyi dışarıda bırakıyor?",
+        "Dağılımı görüyor muyuz?",
+        "Bu bilgi hangi karara yardımcı olacak?"
+      ],
+      "service": "yonetim-danismanligi"
+    },
+    {
+      "id": "joseph-stiglitz-bilgi-ve-guven",
+      "title": "Bilgi eşit dağılmadığında.",
+      "topic": "BİLGİ & ŞEFFAFLIK",
+      "summary": "Bir iş ortaklığı görüşmesinde yalnız sunulan dosyayı okumakla kalmayın. Karar için gereken fakat henüz paylaşılmayan bilgiyi de listeleyin.",
+      "intro": "Bir işlemi anlamak, tarafların hangi bilgilere sahip olduğunu anlamakla başlar.",
+      "sections": [
+        [
+          "Sorulacak soruları hazırlayın",
+          "Bir iş ortaklığı görüşmesinde yalnız sunulan dosyayı okumakla kalmayın. Karar için gereken fakat henüz paylaşılmayan bilgiyi de listeleyin."
+        ],
+        [
+          "Belirsizliği açıkça kaydedin",
+          "Eksik bir veriyi tahminle doldurmak gerekiyorsa bunu gerçek bilgi gibi sunmayın. Varsayımı, kaynağını ve sonuç üzerindeki olası etkisini ayrı belirtin."
+        ]
+      ],
+      "sourceTitle": "NobelPrize.org · 2001, asimetrik bilgi üzerine kamuoyu bilgisi",
+      "source": "https://www.nobelprize.org/prizes/economic-sciences/2001/popular-information/",
+      "sourceSummary": "Stiglitz’in katkıları, daha az bilgiye sahip tarafın sözleşme seçenekleri gibi düzeneklerle bilgiyi ortaya çıkarmasını inceler.",
+      "takeaway": "Bilgi boşluklarını görünür kılın.",
+      "questions": [
+        "Hangi bilgi kimde?",
+        "Eksik veri sonucu nasıl etkiliyor?",
+        "Açıklamayı ne destekliyor?"
+      ],
+      "service": "bagimsiz-denetim"
+    },
+    {
+      "id": "george-akerlof-kalite-ve-kanit",
+      "title": "Güveni görünür kılan kanıt.",
+      "topic": "KALİTE & KANIT",
+      "summary": "Bir sunumdaki her önemli açıklamanın hangi kayıt, sözleşme veya dönem bilgisine dayandığını belirleyin. Görsel olarak iyi hazırlanmış bir tablo, kendi başına doğrulama sağlamaz.",
+      "intro": "Kalite hakkında söylenenle, kaliteyi destekleyen kanıt aynı şey değildir.",
+      "sections": [
+        [
+          "İddia ile dayanağı eşleştirin",
+          "Bir sunumdaki her önemli açıklamanın hangi kayıt, sözleşme veya dönem bilgisine dayandığını belirleyin. Görsel olarak iyi hazırlanmış bir tablo, kendi başına doğrulama sağlamaz."
+        ],
+        [
+          "İzlenebilir bir dosya oluşturun",
+          "Bir tutarın ana kaydından rapora kadar izlenebilmesi görüşmeyi kolaylaştırır. Belge tarihleri ve versiyonların açık olması, farklı dosyaların karıştırılmasını azaltır."
+        ]
+      ],
+      "sourceTitle": "NobelPrize.org · 2001, asimetrik bilgi üzerine kamuoyu bilgisi",
+      "source": "https://www.nobelprize.org/prizes/economic-sciences/2001/popular-information/",
+      "sourceSummary": "Akerlof, satıcı ile alıcının kalite hakkında farklı bilgiye sahip olmasının piyasa sonuçlarını nasıl etkileyebildiğini açıklar.",
+      "takeaway": "Güçlü bir açıklama, izlenebilir dayanak ister.",
+      "questions": [
+        "Bu iddianın dayanağı nedir?",
+        "Kayıttan rapora iz sürebiliyor muyuz?",
+        "Belge güncel mi?"
+      ],
+      "service": "bagimsiz-denetim"
+    },
+    {
+      "id": "michael-spence-anlamli-sinyaller",
+      "title": "Ne söylediğiniz, ne gösterdiğiniz.",
+      "topic": "İLETİŞİM & SİNYAL",
+      "summary": "Bir yatırım görüşmesinde iyi tasarlanmış sunum kadar bilgilerin tutarlılığı da önemlidir. Sunum, finansal kayıt ve iş planı arasındaki farklılıkları görüşmeden önce açıklayın.",
+      "intro": "Bir işaretin anlamı, onu destekleyen koşullarla birlikte değerlendirilir.",
+      "sections": [
+        [
+          "Sunumun arkasındaki yapıyı gösterin",
+          "Bir yatırım görüşmesinde iyi tasarlanmış sunum kadar bilgilerin tutarlılığı da önemlidir. Sunum, finansal kayıt ve iş planı arasındaki farklılıkları görüşmeden önce açıklayın."
+        ],
+        [
+          "Beklentiyi ölçülü kurun",
+          "Bir yetkinliği ifade ederken kapsamını belirtin. Bir belge veya unvan, her iş için aynı anlamı taşımaz. Karşı tarafın hangi sorusunu yanıtladığınızı düşünün."
+        ]
+      ],
+      "sourceTitle": "NobelPrize.org · 2001, asimetrik bilgi üzerine kamuoyu bilgisi",
+      "source": "https://www.nobelprize.org/prizes/economic-sciences/2001/popular-information/",
+      "sourceSummary": "Spence’in sinyal teorisi, daha bilgili tarafın bazı koşullarda özel bilgisini diğer tarafa aktarabilmesini inceler.",
+      "takeaway": "İletişimi, doğrulanabilir bilgiyle destekleyin.",
+      "questions": [
+        "Bu işaret ne anlatıyor?",
+        "Dayanak bilgisi paylaşılabiliyor mu?",
+        "Kapsam doğru anlaşılıyor mu?"
+      ],
+      "service": "sirket-degerlemesi"
+    },
+    {
+      "id": "ronald-coase-koordinasyon",
+      "title": "İşin görünmeyen maliyeti.",
+      "topic": "KURUM & KOORDİNASYON",
+      "summary": "Bir işi içeride yürütmekle dışarıdan almak arasında karar verirken teslim, kontrol ve iletişim ihtiyaçlarını yazın. Birim ücret, kararın yalnızca bir parçasıdır.",
+      "intro": "Bir işin maliyeti, yalnız faturadaki tutardan oluşmaz.",
+      "sections": [
+        [
+          "Koordinasyonu da hesaba katın",
+          "Bir işi içeride yürütmekle dışarıdan almak arasında karar verirken teslim, kontrol ve iletişim ihtiyaçlarını yazın. Birim ücret, kararın yalnızca bir parçasıdır."
+        ],
+        [
+          "Sorumlulukların sınırını çizin",
+          "Hangi çıktı ne zaman teslim edilecek ve kim kabul edecek? Bu sorular net değilse küçük bir işlem çok sayıda görüşme ve düzeltme gerektirebilir."
+        ]
+      ],
+      "sourceTitle": "NobelPrize.org · Ronald Coase, 1991 ödül konuşması",
+      "source": "https://www.nobelprize.org/prizes/economic-sciences/1991/coase/lecture/",
+      "sourceSummary": "Coase, fiyatı öğrenmek, anlaşmak, sözleşme hazırlamak ve kontrol etmek gibi işlemlerin maliyetlerini firma ve piyasa düzeniyle ilişkilendirir.",
+      "takeaway": "Fiyatın yanında, işleyişin maliyetini görün.",
+      "questions": [
+        "Koordinasyon için ne gerekiyor?",
+        "Teslimin tanımı açık mı?",
+        "Kontrol sorumluluğu kimde?"
+      ],
+      "service": "yonetim-danismanligi"
+    },
+    {
+      "id": "herbert-simon-karar-cercevesi",
+      "title": "Karara yer açın.",
+      "topic": "KARAR & ORGANİZASYON",
+      "summary": "Önce toplantıda hangi kararın alınacağını yazın. Ardından seçenekleri karşılaştırmak için gereken bilgileri seçin. Her veri aynı anda ana ekranda olmak zorunda değildir.",
+      "intro": "Karar için daha çok bilgi kadar, iyi düzenlenmiş bilgi de gerekir.",
+      "sections": [
+        [
+          "Raporu karardan başlayarak kurun",
+          "Önce toplantıda hangi kararın alınacağını yazın. Ardından seçenekleri karşılaştırmak için gereken bilgileri seçin. Her veri aynı anda ana ekranda olmak zorunda değildir."
+        ],
+        [
+          "Ayrıntıya erişimi koruyun",
+          "Kısa bir yönetim özeti hazırlarken dayanak kayıtları kaybetmeyin. Özet ile detay arasında açık bağlantı kurmak, farklı rollerin aynı raporu kullanmasını kolaylaştırır."
+        ]
+      ],
+      "sourceTitle": "NobelPrize.org · Herbert Simon, Rational Decision-Making in Business Organizations",
+      "source": "https://www.nobelprize.org/uploads/2018/06/simon-lecture.pdf",
+      "sourceSummary": "Simon’ın konuşması, işletmelerde karar vermeyi ve muhasebe bilgilerinin karar süreçlerindeki kullanımını ele alır.",
+      "takeaway": "Bilgiyi, kararın etrafında düzenleyin.",
+      "questions": [
+        "Hangi karar alınacak?",
+        "Seçenekler karşılaştırılabiliyor mu?",
+        "Ayrıntıya nasıl ulaşılır?"
+      ],
+      "service": "yonetim-danismanligi"
+    },
+    {
+      "id": "paul-romer-bilgi-ve-yenilik",
+      "title": "Bilgi, kullanıldıkça çoğalır.",
+      "topic": "BİLGİ & YENİLİK",
+      "summary": "Bir yöntemin yalnız onu geliştiren kişinin bilgisinde kalması kurumsal öğrenmeyi sınırlar. Tanımlar, örnekler ve kullanım notları yöntemi başkalarının da değerlendirmesini sağlar.",
+      "intro": "Bir fikrin değeri, onu işleyişe dönüştürebildiğinizde görünür olur.",
+      "sections": [
+        [
+          "Bilgiyi kişiden sürece taşıyın",
+          "Bir yöntemin yalnız onu geliştiren kişinin bilgisinde kalması kurumsal öğrenmeyi sınırlar. Tanımlar, örnekler ve kullanım notları yöntemi başkalarının da değerlendirmesini sağlar."
+        ],
+        [
+          "Yeni aracı eski soruyla ölçün",
+          "Bir teknoloji yatırımı öncesinde çözülecek ihtiyacı belirleyin. Daha fazla ekran veya otomasyon, tek başına daha iyi karar anlamına gelmez. Başlangıç durumunu ve beklenen çıktıyı kaydedin."
+        ]
+      ],
+      "sourceTitle": "NobelPrize.org · 2018 ekonomi bilimleri ödülü tanıtım metni",
+      "source": "https://www.nobelprize.org/uploads/2018/09/SpeakersManuscript_EconomicSciences_2018-1.pdf",
+      "sourceSummary": "Romer’in araştırmaları, teknolojik yeniliğin piyasa talebi ve düzenlemelerle ilişkisini ekonomik büyüme analizine taşır.",
+      "takeaway": "Yeniliği, somut bir iş ihtiyacına bağlayın.",
+      "questions": [
+        "Hangi bilgi tekrar kullanılabilir?",
+        "Hangi ihtiyaç çözülüyor?",
+        "Sonuç nasıl izlenecek?"
+      ],
+      "service": "yonetim-danismanligi"
+    },
+    {
+      "id": "robert-solow-buyume-ve-verimlilik",
+      "title": "Daha fazla. Daha verimli.",
+      "topic": "BÜYÜME & VERİMLİLİK",
+      "summary": "Daha yüksek satış, tek başına daha verimli bir işleyiş göstermez. İş yükü, kapasite, maliyet ve çıktı tanımlarını aynı dönemde karşılaştırın.",
+      "intro": "Büyümeyi anlamak için, kullanılan kaynaklarla ortaya çıkan sonucu birlikte okuyun.",
+      "sections": [
+        [
+          "Hacimle verimliliği ayırın",
+          "Daha yüksek satış, tek başına daha verimli bir işleyiş göstermez. İş yükü, kapasite, maliyet ve çıktı tanımlarını aynı dönemde karşılaştırın."
+        ],
+        [
+          "Ölçüm tanımını sabit tutun",
+          "Dönemler arasında gösterge hesabı değişirse görülen farkın bir bölümü yöntemden kaynaklanabilir. Değişikliği raporda açıklayın; eski ve yeni seriyi sessizce birleştirmeyin."
+        ]
+      ],
+      "sourceTitle": "NobelPrize.org · Robert Solow, 1987 ödül konuşması",
+      "source": "https://www.nobelprize.org/prizes/economic-sciences/1987/solow/lecture/",
+      "sourceSummary": "Solow’un büyüme çalışmaları, üretimin zaman içindeki gelişimini ve üretim kaynaklarının bu gelişimdeki rolünü inceleyen bir çerçeve sunar.",
+      "takeaway": "Sonucun yanında, onu üreten kaynakları da okuyun.",
+      "questions": [
+        "Çıktı nasıl tanımlanıyor?",
+        "Kaynak kullanımı nasıl değişti?",
+        "Dönemler karşılaştırılabilir mi?"
+      ],
+      "service": "yonetim-danismanligi"
+    },
+    {
+      "id": "douglass-north-kurumlar-ve-sureklilik",
+      "title": "İyi işleyiş, zamanla kurulur.",
+      "topic": "KURUMSAL HAFIZA",
+      "summary": "Bir prosedürün varlığı, uygulamanın aynı şekilde yürüdüğünü göstermez. İşin gerçek akışını ilgili ekiplerle konuşun; istisnaları ve nedenlerini kaydedin.",
+      "intro": "Kurallar kadar, zaman içinde oluşan alışkanlıklar da işleyişi biçimlendirir.",
+      "sections": [
+        [
+          "Yazılı süreçle günlük işi karşılaştırın",
+          "Bir prosedürün varlığı, uygulamanın aynı şekilde yürüdüğünü göstermez. İşin gerçek akışını ilgili ekiplerle konuşun; istisnaları ve nedenlerini kaydedin."
+        ],
+        [
+          "Deneyimi kurumsal hafızaya dönüştürün",
+          "Bir ekip değiştiğinde bilgi kaybolmaması için önemli kararların gerekçelerini saklayın. Yalnız sonucun değil, o sonuca neden varıldığının da izlenebilmesi önemlidir."
+        ]
+      ],
+      "sourceTitle": "NobelPrize.org · Douglass North, 1993 ödül konuşması",
+      "source": "https://www.nobelprize.org/prizes/economic-sciences/1993/north/lecture/",
+      "sourceSummary": "North’un konuşması kurumları, teşvikleri ve zaman içinde biriken öğrenmeyi ekonomik değişimin anlaşılmasında birlikte ele alır.",
+      "takeaway": "Deneyimi, paylaşılabilir bir çalışma düzenine dönüştürün.",
+      "questions": [
+        "Yazılı düzenle uygulama örtüşüyor mu?",
+        "İstisnalar neden oluşuyor?",
+        "Kararın gerekçesi kaydediliyor mu?"
+      ],
+      "service": "yonetim-danismanligi"
+    }
+  ]
 }
