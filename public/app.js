@@ -1,10 +1,13 @@
-import {matchesSearch,archivePageState,heroMotionAllowed,cardLightingPosition} from './ui-core.js';
+import {matchesSearch,archivePageState,heroMotionAllowed,cardLightingPosition,headerScrollHidden} from './ui-core.js';
 
 const root=document.documentElement;
 root.classList.add('js');
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 let manualPause=false;
 const siteHeader=document.querySelector('.site-header');
+const touchNavigation=matchMedia('(hover: none)');
+let headerScrollY=scrollY;
+document.querySelector('.header-reveal').addEventListener('click',()=>{siteHeader.classList.remove('is-hidden');siteHeader.querySelector('a').focus();});
 const heroStage=document.querySelector('[data-hero-stage]');
 const heroScenes=[...document.querySelectorAll('[data-hero-scene]')];
 const heroSelect=[...document.querySelectorAll('[data-hero-select]')];
@@ -37,6 +40,8 @@ function renderScroll() {
   scheduled=false;
   const stopped=root.classList.contains('motion-off');
   siteHeader.classList.toggle('is-scrolled',scrollY>40);
+  siteHeader.classList.toggle('is-hidden',headerScrollHidden(scrollY,headerScrollY,siteHeader.classList.contains('is-hidden'),touchNavigation.matches));
+  if(Math.abs(scrollY-headerScrollY)>4)headerScrollY=scrollY;
   if(innerWidth<=1080)navigationMenus.forEach(menu=>{menu.open=false;});
   if(heroStage && !stopped)heroStage.style.setProperty('--hero-shift',Math.min(3,scrollY*.01)+'px');
 }

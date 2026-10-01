@@ -6,6 +6,7 @@ export function matchesSearch(text, query) {
   return normalizeSearch(query).split(/\s+/).every(word=>haystack.includes(word));
 }
 export const heroMotionAllowed=(paused,pageHidden,visibleFraction,dialogOpen)=>!paused && !pageHidden && visibleFraction>=.2 && !dialogOpen;
+export const headerScrollHidden=(current,previous,hidden,touch)=>current>120 && (!touch || (Math.abs(current-previous)>4 ? current>previous : hidden));
 export function worldLabelPosition(x,y,width,height,labelWidth,labelHeight,origin) {
   const left=origin?x+12:x-labelWidth;
   const top=origin?y-labelHeight/2:y-labelHeight*1.15;
