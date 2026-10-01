@@ -38,3 +38,15 @@ Uygulama sonrasında Jev ile 953 benzersiz Türkçe başlık, açıklama, paragr
 Gerçek fotoğraflı büyük açılış kartı; altı asimetrik uzmanlık kartı; yaklaşımın üç ilkesi; yayınlar ve kaynak araçları; görüşme öncesi sorular ve iletişim. Ortak gezinme ve iç sayfa panelleri aynı renk, font, kenarlık ve boşluk düzenini kullanır. Dekoratif oklar kaldırılmıştır.
 
 Kartlarda fare konumunu izleyen ışık, sınırlı derinlik, fotoğraf yakınlaşması ve bölüm girişleri bulunur. Dokunmatik ekranda kart eğimi kullanılmaz. Durdurma, azaltılmış hareket, ekran dışı açılış ve açık menü/arama durumları dikkate alınır. Logo özgün dosyadır; fotoğraflar kullanıcının toplantı, el sıkışma, belge çalışması ve ofis arşivindendir.
+
+## Design 6 kimliğinin geri alınması
+
+Gerçek kaynak, `../boradendesign2/DESIGN6_HANDOFF.md` ile doğrulandı: klasör adı değişmemiş olsa da dosya private `uslumustafa/boradendesign6` deposunun aktarım kaydıdır. `public/insan/world.js`, `world.css`, `index.html` ve `data/boraden.json` hedefli incelendi. Önceki yerel projeler değiştirilmedi.
+
+Türkiye merkezli gerçek kara kütleli gece küresi, ana sayfanın ikinci ana sahnesine taşındı. ORBIST adı ve İngiltere etiketi korunur. Eski yedi temsilî kıta hattı ve dekoratif ok konileri kaldırıldı; hizmetler kıta veya şube ağı olarak gösterilmez. Özgün NASA 2016 dokusunun 4096 × 2048 sürümü ve mevcut Three.js/MIT varlıkları kullanılır. ORBIST’in ilişki türü, dış URL’si veya logosu kaynakta bulunmadığı için bunlar uydurulmadı.
+
+Design 6’daki 14 `perspectives` kaydı; kişi, portre, biyografi ve alıntı alanları dışarıda bırakılarak taşındı. Ayrı dizin ve 14 detay sayfası; özgün kaynak, ana fikir, değerlendirme soruları ve ilgili hizmetler sunar. Dünya motifi kart kapaklarında devam eder. OneText’in güçlü içerik grupları ve ZeBeyond’un belirgin hiyerarşisi, bu gerçek marka içeriğinin sunumuna uygulandı.
+
+12 benzersiz birincil kaynak kontrol edildi; dört PDF’nin metni incelendi. Eski 2001 Nobel sayfasının üç kullanımı güncel canonical kaynağa yönlendirildi. Yalnız Buffett mektubunun doğrulanmış kaynak tarihi gösterilir. Kaynak tarihi Boraden yayın tarihi sayılmaz.
+
+Jev, gerçek küre + portresiz kaynaklı okumalar yönünü `source_identity` olarak seçti. ORBIST kaynağı `label_only` sınıfındadır. Bunlar Codex’in kararına girdidir, tasarım kalitesi ölçümü değildir. Codex üç `hâle` yazımını düzeltti; ardından 194 benzersiz yeni metin parçasının Jev taramasında 0,70 hata eşiğinde bulgu yoktu.

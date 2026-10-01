@@ -31,6 +31,7 @@ test('complete standalone pages, links, metadata and factual schema',()=>{
     assert.ok(schema['@graph'].some(n=>n['@type']==='WebSite'));
     if(page.service)assert.ok(schema['@graph'].some(n=>n['@type']==='Service'));
     if(page.post?.publicationDateVerified===false)assert.equal(schema['@graph'].find(n=>n['@type']==='Article').datePublished,undefined);
+    if(page.post?.source)assert.equal(schema['@graph'].find(n=>n['@type']==='Article').citation,page.post.source);
     const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]);
     assert.equal(new Set(ids).size,ids.length,page.path+' duplicate IDs');
     for(const [,url] of html.matchAll(/(?:href|src)="([^\"]+)"/g)) {
@@ -45,7 +46,7 @@ test('complete standalone pages, links, metadata and factual schema',()=>{
         assert.ok(destination.includes('id="'+url.split('#')[1]+'"'),page.path+' fragment '+url);
       }
     }
-    assert.doesNotMatch(html,/(?:href|src)="[^\"]*(?:thinkers|ekibimiz|perspektifler\/|people\.mp4)/);
+    assert.doesNotMatch(html,/(?:href|src)="[^\"]*(?:thinkers|ekibimiz|people\.mp4)/);
     assert.doesNotMatch(html,/datetime="(?:null|undefined)"|1 Ocak 1970/);
     // Catch exact adjacent word duplication in editorial prose, excluding navigation and structural labels.
     for(const [,text] of html.matchAll(/<(?:p|h[1-3])(?: [^>]*)?>(.*?)<\/(?:p|h[1-3])>/gs)) {
@@ -54,11 +55,23 @@ test('complete standalone pages, links, metadata and factual schema',()=>{
       assert.ok(repeats.every(m=>m[1]==='tek'),page.path+' repeated word: '+plain);
     }
   }
-  for(const file of ['style.css','app.js','calculators.js']) {
+  for(const file of ['style.css','home.css','interior.css','app.js','calculators.js']) {
     const text=fs.readFileSync(path.join(out,file),'utf8');
     for(const [,asset] of text.matchAll(/url\(['"]?(\/[^)'"\s]+)['"]?\)/g))assert.ok(fs.existsSync(path.join(out,asset)),asset);
   }
   assert.equal(publications.length,12);
+  assert.equal(content.perspectives.length,14);
+  for(const p of content.perspectives) {
+    assert.ok(content.services.some(s=>s.id===p.service),p.id+' missing related service');
+    assert.match(p.source,/^https:\/\/(?:www\.)?(?:nobelprize\.org|berkshirehathaway\.com)\//);
+    assert.ok(p.sections.length && p.questions.length);
+    for(const field of ['person','image','bio','credit','quote'])assert.equal(p[field],undefined);
+  }
+  const home=fs.readFileSync(path.join(out,'index.html'),'utf8');
+  assert.match(home,/id="dunyaya-bakis"/);
+  assert.match(home,/<h3>ORBIST<\/h3>/);
+  assert.match(home,/şube ağını veya kesin ofis adreslerini göstermez/);
+  assert.match(home,/id="dunyadan-perspektifler"/);
 });
 
 test('preview HTTP methods, redirects, missing files and rejected paths',async t=>{

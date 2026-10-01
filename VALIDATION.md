@@ -1,8 +1,20 @@
 # Doğrulama — 1 Ekim 2026
 
-Ana sayfa büyük fotoğraf kartı, altı asimetrik uzmanlık kartı, yaklaşım ilkeleri, yayınlar ve kaynak araçları, sorular ve iletişimle yeniden kuruldu. Lacivert, kobalt ve yeşil vurgu; Manrope başlıklar ve aynı dili kullanan iç sayfa panelleri uygulandı. Geniş hizmet menüsü eklendi, dekoratif oklar kaldırıldı. Özgün logo, favicon, kurumsal bilgiler, belgeler ve hesaplama mantığı korundu. Referans gözlemleri DESIGN_REFERENCES.md içinde kayıtlıdır.
+Ana sayfaya gerçek Design 6 kaynağından Türkiye merkezli gece küresi, ORBIST adı/İngiltere etiketi ve Dünyadan Perspektifler geri alındı. Küre ikinci ana sahnedir; 14 okuma notu portresiz dünya motifli kartlarla ve ayrı detay sayfalarıyla sunulur. Mevcut büyük fotoğraf açılışı, altı asimetrik uzmanlık kartı, iç sayfa dili, yayınlar, araçlar, 247 belge ve hesaplama mantığı korunur. Referans gözlemleri DESIGN_REFERENCES.md içinde kayıtlıdır.
 
-`npm run check`: 5 kontrol geçti, 0 hata. 85 içerik sayfası ve 404, 47 hizmet, 6 uzmanlık grubu, 12 yayın ve 247 belge; bağlantılar, görseller, fontlar, tek H1, Türkçe dil, meta veri, canonical, yapılandırılmış veri ve benzersiz kimlikler doğrulandı. Türkçe arama, filtreli arşiv sayfalama sınırları, hesaplamalar, geçersiz girdiler ve sunucu güvenlik kontrolleri geçti. Önizleme indekslenmez; üretimde indeksleme açıkça etkinleştirilir.
+`npm run check`: 5 kontrol geçti, 0 hata. 100 içerik sayfası ve 404, 47 hizmet, 6 uzmanlık grubu, 12 yayın, 14 perspektif ve 247 belge; bağlantılar, görseller, fontlar, tek H1, Türkçe dil, meta veri, canonical, yapılandırılmış veri ve benzersiz kimlikler doğrulandı. Perspektiflerin Article citation alanları ve tarih sınırları kontrol edilir. Türkçe arama, filtreli arşiv sayfalama sınırları, hesaplamalar, geçersiz girdiler ve sunucu güvenlik kontrolleri geçti. Önizleme indekslenmez; üretimde indeksleme açıkça etkinleştirilir.
+
+## Dünya ve perspektifler: son kontroller
+
+- Masaüstünde 1280 × 720, mobilde 320 × 780 ve 390 × 844 görünümler gerçek tarayıcıda incelendi; yatay taşma sıfır. Mobil okuma gövdesinin önceki makale stillerinden aldığı çift boşluk tek yerde düzeltilerek 320px ekranda panellerin 280px genişliği korundu. Sabit menü için yeni bağlantıların çift kaydırma payı giderildi.
+- Gerçek NASA dokusu ve Three.js r186 ile WebGL görünür. Türkiye/İngiltere etiketleri, çizgi, Home düğmesi/tuşu, yön tuşları ve fareyle döndürme kontrol edildi. Durdurma koordinatları sabit tuttu; açık hizmet menüsü ve arama penceresi hareketi durdurdu. Küre ekran dışında durdu ve görünürken devam etti. Sistem hareket tercihi değiştirilmedi; azaltılmış hareket ve gizli sayfa kapıları kod/mantık incelemesiyle kontrol edildi.
+- Mobil menünün yedi ana bağlantısı açıldı; dünya bağlantısı doğru bölüme ulaştı. Okuma kartı detay sayfasını açtı; bölüm menüsü, sorular, kaynak paneli ve ilgili hizmetler kontrol edildi. Küre metni ve kaynaklı okumalar JavaScript tarafından üretilmez; statik HTML’de yer alır.
+- 14 özgün Design 6 okuması taşındı. Önceki yedi veri kökü değişmedi. 12 benzersiz birincil kaynak HTTP 200; dört PDF metni incelendi. Yalnız Buffett mektubunun doğrulanmış 2 Mart 1990 kaynak tarihi gösterilir. Kaynak tarihi Boraden yayın tarihi olarak kullanılmaz. Kişi, portre, biyografi ve doğrudan alıntı alanları taşınmadı.
+- ORBIST’in ilişki türü, dış URL’si ve logosu kaynakta bulunmuyor. Panel yalnız kaynakta bulunan adı, İngiltere etiketini ve kurumsal iletişim yönlendirmesini içerir. Küre çizgisi şube ağı veya kesin ofis konumu olarak sunulmaz.
+- Küre kodu, yerel vendor ve doku yaklaşık 2,67 MB; 3D motoru bölüm yaklaşınca başlatılır. Yeni npm bağımlılığı, uzak görsel isteği veya ziyaretçi takibi yok. NASA kaynak kaydı ve Three.js MIT lisansı varlıklarla saklanır.
+- Son metin incelemesinde Codex üç `hâle` yazımını düzeltti. Ardından dünya ve 14 perspektifin 194 benzersiz yeni metin parçası Jev ile tarandı: 0,70 eşiğinde bulgu yok, en yüksek hata olasılığı 0,50. Bu sonuç yazım garantisi olarak sunulmaz.
+
+Yeni gerçek ekran görüntüleri `../output/design7-world-review/` altında saklanır: dünya/ORBIST masaüstü ve mobil sahnesi, perspektif kartları ve okuma detayları. Önceki sürümün kontrolleri aşağıda korunur.
 
 Gerçek tarayıcı kontrolleri:
 
