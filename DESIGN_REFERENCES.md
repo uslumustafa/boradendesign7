@@ -1,13 +1,40 @@
-# İncelenen tasarım referansları
+# Referans incelemesi ve uygulama — 1 Ekim 2026
 
-1 Ekim 2026’da beş Dribbble çalışmasının tasarım görselleri incelendi. OneText’in hareketli açılışı ve beş ek görseli; Lunaria’nın masaüstü hizmet sayfası ve mobil sunumu ayrıca incelendi. Dribbble sunumları canlı sitelerin bütün davranışlarını kanıtlamaz. Kullanıcının YouTube videosu da açılış, sayfa akışı ve hareket referansı olarak incelendi.
+Kullanıcının YouTube bağlantısı, modern website etiket sayfası ve beş Dribbble çalışması tekrar incelendi. Statik sunumun gösterdiği düzen ile canlı etkileşimin kanıtladığı davranış ayrı değerlendirildi. Ek web araştırmasında Mercury, Ramp ve RSM’in canlı sayfaları incelendi. Amaç; fotoğraf, kart, menü ve iç sayfa hiyerarşisini Boraden’in gerçek içeriğine uyarlamaktı.
 
-- [OneText](https://dribbble.com/shots/25274075-OneText-SaaS-AI-Website-UI-UX-Design): koyu zemin, mavi ışık, katmanlı görsel anlatım ve kısa sans başlıklar. Boraden’de lacivert–kobalt kontrastı, belirgin eylem düğmeleri ve kontrollü görsel hareket kullanıldı.
-- [ZeBeyond](https://dribbble.com/shots/26978736-Engineering-Platform-Web-Design-ZeBeyond): koyu açılış ve bitişik yetkinlik alanları; mobilde sıralı içerik. Altı uzmanlık alanı arasından seçilen tek fotoğraf/metin paneline ilham verdi.
-- [VineWinner](https://dribbble.com/shots/26831415-AI-Powered-Wine-Website-Design-VineWinner): sinematik fotoğraf, büyük tipografi ve editoryal aralıklar. Boraden açılışında fotoğraf ekranın ana öğesidir; kısa başlık ve eylemler fotoğraf üzerinde yer alır.
-- [BM Śladewska](https://dribbble.com/shots/27415419-Manufacturing-Website-Design-BM-ladewska): güçlü fotoğraf, az metin ve fotoğrafla hizmet açıklamasını birleştiren paneller. Toplantı, belge çalışması ve el sıkışma sahneleri; büyük hizmet fotoğrafı ve kısa açıklama düzeninde uygulandı.
-- [Lunaria](https://dribbble.com/shots/26594325-Lunaria-Web-Design-for-Premium-Beauty-Studio): büyük, sıkı başlıklar ve kategori seçimi. Tipografi ölçeği ve uzmanlık seçiminin açık hiyerarşisinde kullanıldı. Boraden’in sans/serif eşleşmesi Manrope ve Instrument Serif ile kuruldu.
+## Kullanıcının referansları
 
-Açılışta üç sahne arasında yumuşak geçiş, hafif fotoğraf hareketi, elle sahne seçimi ve durdurma bulunur. Hizmet fotoğrafı seçime bağlı olarak açılır; bölüm başlıkları kaydırmada görünür. Normal sayfa akışı korunur, uzun bir sabitlenmiş kaydırma dizisi kullanılmaz. Hareket azaltma tercihi, ekran dışı/gizli sayfa ve açık menü/arama durumları dikkate alınır.
+| Referans | Somut gözlem | Boraden’e uygulama |
+| --- | --- | --- |
+| [OneText](https://dribbble.com/shots/25274075-OneText-SaaS-AI-Website-UI-UX-Design) | Açılış hareketi, beş ek görsel, masaüstü ve mobil sunum incelendi. Büyük koyu içerik grupları, belirgin kart sınırları ve kısa başlıklar; blog görünümünde başlık, kapak, içerik ve bölüm bağlantıları. | Lacivert açılış kartı, kobalt içerik vurgusu, büyük uzmanlık kartları, tutarlı yayın ve hizmet panelleri. |
+| [Lunaria](https://dribbble.com/shots/26594325-Lunaria-Web-Design-for-Premium-Beauty-Studio) | Kategori kartları; büyük fotoğraf alanlarıyla küçük bilgi kartlarını birleştiren asimetrik düzen. Ayrıntıda fotoğraf, başlık, açıklama, kapsam ve eylem sırası; mobilde tek sütun. | Altı uzmanlığın farklı genişliklerde fotoğraf ve bilgi kartları; ayrıntıda genel bakış, kapsam, hazırlık ve görüşme bölümleri. |
+| [ZeBeyond](https://dribbble.com/shots/26978736-Engineering-Platform-Web-Design-ZeBeyond) | Büyük başlıklar, karanlık kart çerçeveleri, filtre ve içerik dizini; mobilde sıralı içerik. | Uzmanlık dizininde gerçek hizmet kartları ve alan bağlantıları; açık başlık hiyerarşisi. |
+| [VineWinner](https://dribbble.com/shots/26831415-AI-Powered-Wine-Website-Design-VineWinner) | Büyük fotoğraf, koyu/açık bölümler ve editoryal boşluklar. Mobilde az sayıda belirgin seçenek ve büyük fotoğraflı içerik. | Büyük gerçek toplantı fotoğrafı; koyu açılış, açık uzmanlık/yayın bölümleri ve koyu yaklaşım bölümü. Boraden paleti ayrıca belirlendi. |
+| [BM Śladewska](https://dribbble.com/shots/27415419-Manufacturing-Website-Design-BM-ladewska) | Fotoğrafla birlikte büyük başlık ve destekleyici açıklama; ayrıntıda geniş görsel ve amaç/çözüm anlatımı. | İç sayfa başlığının yanında çalışma fotoğrafı; içerikte kapsam ve hazırlık panelleri. |
+| [Modern website etiket sayfası](https://dribbble.com/tags/modern-website) | Farklı sektörlerden kart, tipografi, fotoğraf ve bölüm düzenleri karşılaştırıldı. | Boraden’in altı alanını açıkça gösteren ortak tasarım dili. |
 
-Referanslardaki görseller kopyalanmadı. Boraden’in özgün logosu, doğrulanmış bilgileri ve kullanıcının toplantı, el sıkışma, belge çalışması ve ofis fotoğrafları kullanıldı. Kişi profili, müşteri yorumu veya uydurma performans sayısı eklenmedi.
+## Video
+
+[YouTube videosu](https://www.youtube.com/watch?v=39IlNR-P3-Q) 17:02 uzunluğundadır. Tam transkript okundu; açılış, bölüm değişimleri, kartlar ve mobil görünümün temsilî kareleri görsel olarak incelendi: 0:21, 3:17–3:37, 11:56–12:56 ve 14:44. Bu kayıt, videonun her karesinin gerçek zamanlı izlendiği iddiası değildir.
+
+Gözlenen güçlü mavi/açık bölüm geçişleri, büyük metin ve içerikle ilişkili fotoğraf kartları; Boraden’de kobalt, lacivert ve yeşil vurguyla uygulandı. Videoda 13:23 civarında belirtilen kaybolan kayan yazı problemi, kesintisiz kayan bir bant eklemek için gerekçe sayılmadı. Normal sayfa akışı korunur; kaydırma bir animasyonun bitmesine bağlanmaz.
+
+## Ek web araştırması
+
+- [Mercury](https://mercury.com/): belirgin fotoğraflar ve kategorilere ayrılmış geniş menü. Boraden’de altı uzmanlık alanını gerçek hizmet sayılarıyla gösteren geniş hizmet menüsüne uyarlanmıştır.
+- [Ramp platform](https://ramp.com/platform/): büyük ana içerik kartı ve destekleyici kartlarla kurulan hiyerarşi; gruplu menü. Boraden’in uzmanlık, yayın ve bilgi araçlarında ana/yardımcı kart ayrımına uyarlanmıştır.
+- [RSM audit services](https://rsmus.com/services/audit-services.html): hizmet özeti, kapsam, sorular ve ilgili içerikler. Boraden’in hizmet sayfalarında tanım, çalışma kapsamı, hazırlık ve kaynak sırası korunarak kullanılmıştır.
+
+Bu kaynaklar tasarım referansıdır; üçüncü taraf müşteri yorumu, fiyat, performans sayısı, kişi portresi veya marka görseli Boraden’e taşınmadı.
+
+## Jev kullanımı
+
+Jev, Codex’in kararına girdi veren sınıflandırma ve puanlama aracı olarak kullanıldı. İlk karşılaştırmada içerik odaklı büyük kart düzeni 4,63/5; fotoğraflı asimetrik düzen 4,22/5; geniş fotoğrafla küçük kutular 1,34/5; Boraden içeriğinden kopuk ürün görselleri 1,03/5 aldı. Bu değerler tanımlanan seçeneklerin semantik uygunluk puanlarıdır; tasarımın veya müşterinin beğenisinin ölçümü değildir.
+
+Uygulama sonrasında Jev ile 953 benzersiz Türkçe başlık, açıklama, paragraf ve soru parçası tarandı. Açık yazım/dil bilgisi hatası veya art arda yanlış kelime tekrarı için 0,70 olasılık eşiğinde işaretlenen metin çıkmadı. Codex ayrıca metinleri ve gerçek tarayıcı görünümünü inceledi; mobilde gizlenen satır kırılmasının kelimeleri birleştirmesi düzeltildi. Otomatik tarama kusursuz yazım garantisi olarak sunulmaz.
+
+## Son tasarım
+
+Gerçek fotoğraflı büyük açılış kartı; altı asimetrik uzmanlık kartı; yaklaşımın üç ilkesi; yayınlar ve kaynak araçları; görüşme öncesi sorular ve iletişim. Ortak gezinme ve iç sayfa panelleri aynı renk, font, kenarlık ve boşluk düzenini kullanır. Dekoratif oklar kaldırılmıştır.
+
+Kartlarda fare konumunu izleyen ışık, sınırlı derinlik, fotoğraf yakınlaşması ve bölüm girişleri bulunur. Dokunmatik ekranda kart eğimi kullanılmaz. Durdurma, azaltılmış hareket, ekran dışı açılış ve açık menü/arama durumları dikkate alınır. Logo özgün dosyadır; fotoğraflar kullanıcının toplantı, el sıkışma, belge çalışması ve ofis arşivindendir.

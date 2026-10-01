@@ -7,7 +7,7 @@ import http from 'node:http';
 import {server} from './server.mjs';
 import {build,root} from './src/build.mjs';
 import {content,archive,publications,dateTR} from './src/content.mjs';
-import {normalizeSearch,matchesSearch,archivePageState,heroMotionAllowed} from './public/ui-core.js';
+import {normalizeSearch,matchesSearch,archivePageState,heroMotionAllowed,cardLightingPosition} from './public/ui-core.js';
 import {vehicleSchedule} from './public/vehicle-core.js';
 
 test('complete standalone pages, links, metadata and factual schema',()=>{
@@ -115,6 +115,11 @@ test('Turkish search, archive pagination and safe photo motion',()=>{
   assert.equal(heroMotionAllowed(false,false,.19,false),false);
   assert.equal(heroMotionAllowed(false,false,.2,false),true);
   assert.equal(heroMotionAllowed(false,false,1,true),false);
+  assert.deepEqual(cardLightingPosition(50,25,100,50),{x:50,y:50,rotateX:0,rotateY:0});
+  assert.deepEqual(cardLightingPosition(1,1,0,0),{x:50,y:50,rotateX:0,rotateY:0});
+  const lighting=cardLightingPosition(-40,200,100,50);
+  assert.ok(lighting.x>=0 && lighting.x<=100 && lighting.y>=0 && lighting.y<=100);
+  assert.ok(Math.abs(lighting.rotateX)<=2 && Math.abs(lighting.rotateY)<=2);
 });
 
 test('calculator results, ceilings, rounding and rejected inputs',()=>{
