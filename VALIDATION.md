@@ -1,6 +1,17 @@
 # Doğrulama — 1 Ekim 2026
 
-## Kısa ana sayfa: son sürüm
+## Navbar ve panoramik açılış: son sürüm
+
+- Ortak navbar 120px sonrasında gizlenir. Gerçek fare hareketiyle üst kenardaki 24px alana gelince açıldı; fare navbarı terk edip içerikteyken yeniden gizlendi. Klavyeyle menü odağına geçiş navbarı görünür tuttu; açık Hizmetler menüsü de görünürlüğü korudu. Escape ile menü kapandı.
+- Fareyle seçilen bağlantının odağı navbarı kalıcı biçimde sabitlemez; klavye için `:focus-visible` kullanılır. Açılmada konum hemen geri gelir ve opaklık geçişi uygulanır; fare üst kenardan navbarın içine giderken hareketli hit alanında boşluk oluşmaz. Azaltılmış harekette geçiş kapatılır.
+- Dokunmatik kaydırma yönü için çalışan kontrol eklendi: aşağı kaydırmada gizleme, yukarı kaydırmada gösterme, 4px altında önceki durumu koruma ve sayfa başında görünürlük. Gerçek dokunmatik donanım veya sistem hareket tercihi taklit edilmedi; ilgili mantık ve CSS incelendi.
+- Açılış büyük fotoğraf üzerinde başlık, serif vurgu, iki doğrudan sayfa bağlantısı ve ince sahne kontrol bandıyla yenilendi. 1280px masaüstü ve 320px/390px mobil incelendi; yatay taşma yok. 320px sahne seçimleri ve durdurma hedefleri 44px yüksekliğindedir.
+- Durdurma sırasında üçüncü sahne elle seçildi: bir etkin sahne, `03 / 03`, üç ortak durdurma kontrolünde etkin durum ve fotoğrafta durmuş CSS hareketi doğrulandı. Dört ana bölüm, dünya/kariyer sırası, tüm ayrıntı sayfaları ve hesaplamalar korunur.
+- `npm run check`: 5 kontrol geçti; mevcut 101 sayfa, bağlantılar, veri, arşiv ve hesaplamalar ile yeni navbar yön/eşik kontrolü kapsanır. Yeni bağımlılık yok. Kod ve diff doğrudan Codex tarafından incelendi.
+
+Gerçek ekranlar `../output/design7-premium-entry-review/` klasöründedir. Önceki kısa ana sayfa ölçümleri aşağıda korunur.
+
+## Önceki kısa ana sayfa
 
 - Dört bölüm: açılış, altı hizmet kartı, dünya/ORBIST, kariyer. Kariyer dünya bölümünün hemen ardından gelir. Uzun yaklaşım, perspektif önizlemesi, yayın, soru ve görüşme blokları ana sayfadan kaldırıldı; ayrıntı sayfaları korunur.
 - Aynı gerçek tarayıcı genişliğinde ana içerik yüksekliği: 1280px masaüstünde 7019,8 → 2091,1px (%70,2 daha kısa); 387px mobilde 12156,8 → 2568,9px (%78,9 daha kısa). Footer dahil toplam yükseklik sırasıyla 7524 → 2596px ve 13079 → 3491px. Bu ölçümler kaydedilen görünüm ve fontlara aittir.

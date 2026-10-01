@@ -4,6 +4,10 @@ Yeni kurumsal site. İçerik kaynağı Design 6; tasarım ve sayfa üretimi sıf
 
 Tasarımın ortak paleti lacivert, beyaz ve kontrollü mavidir. Koyu Manrope tipografisi korunur; özgün logo tek lacivert navbar üzerinde doğal oranıyla gösterilir. Hizmetler ve Bilgi Merkezi açılır menüleri, mobil menü, arama, kartlar ve iç sayfalar aynı renk tanımlarını kullanır. Yayınlar, perspektifler, hesaplamalar, arşiv ve sektör raporlarına masaüstünden ve mobilden doğrudan erişilir.
 
+Navbar sayfa başında görünür; 120px sonrasında içerikten çekilir. Fare üst kenardaki alana geldiğinde veya klavye odağı menüye ulaştığında açılır. Açık menü ve dialoglar gezinmeyi korur. Dokunmatik cihazlarda yukarı kaydırma ve üst kenardaki menü düğmesiyle geri çağrılır; JavaScript olmadan görünür kalır.
+
+Açılış geniş kurumsal fotoğraf, okunurluğu koruyan lacivert katman, büyük Manrope başlık ve tek kelimede yerel Instrument serif vurgusuyla hazırlanır. Sahne seçimi ve durdurma görselin altında yer alır. Yeni fotoğraf çerçeveleri veya uzun vitrin bölümleri eklenmez; dünya ve kariyer sırası korunur.
+
 Node.js 20 veya sonrası yeterlidir. Haricî paket kurulumu gerekmez.
 
 ```sh

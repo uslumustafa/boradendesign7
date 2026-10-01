@@ -7,7 +7,7 @@ import http from 'node:http';
 import {server} from './server.mjs';
 import {build,root} from './src/build.mjs';
 import {content,archive,publications,dateTR} from './src/content.mjs';
-import {normalizeSearch,matchesSearch,archivePageState,heroMotionAllowed,cardLightingPosition,worldLabelPosition} from './public/ui-core.js';
+import {normalizeSearch,matchesSearch,archivePageState,heroMotionAllowed,cardLightingPosition,worldLabelPosition,headerScrollHidden} from './public/ui-core.js';
 import {vehicleSchedule} from './public/vehicle-core.js';
 
 test('complete standalone pages, links, metadata and factual schema',()=>{
@@ -145,6 +145,13 @@ test('Turkish search, archive pagination and safe photo motion',()=>{
   assert.equal(heroMotionAllowed(false,false,.19,false),false);
   assert.equal(heroMotionAllowed(false,false,.2,false),true);
   assert.equal(heroMotionAllowed(false,false,1,true),false);
+  assert.equal(headerScrollHidden(120,0,true,false),false);
+  assert.equal(headerScrollHidden(121,0,false,false),true);
+  assert.equal(headerScrollHidden(300,400,true,false),true);
+  assert.equal(headerScrollHidden(300,400,true,true),false);
+  assert.equal(headerScrollHidden(400,300,false,true),true);
+  assert.equal(headerScrollHidden(400,398,false,true),false);
+  assert.equal(headerScrollHidden(400,398,true,true),true);
   assert.deepEqual(cardLightingPosition(50,25,100,50),{x:50,y:50,rotateX:0,rotateY:0});
   assert.deepEqual(cardLightingPosition(1,1,0,0),{x:50,y:50,rotateX:0,rotateY:0});
   const lighting=cardLightingPosition(-40,200,100,50);
